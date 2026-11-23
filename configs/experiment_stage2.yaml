@@ -1,0 +1,23 @@
+# Frozen before comparative outputs. Design ID stage2_v1.
+model: porto-v4-conservative-v2
+development: [r2-20, r4-40, r6-60, r8-80]
+held_out: [r10-100, r12-120, r14-140, r16-160, r18-180, r20-200]
+tariffs: [ToU, Flat]
+seeds: [11, 29, 47, 71, 101]
+validation_seeds: [131, 173]
+methods: [B0, B1, B2, B3, P]
+validation_methods: [B3, P]
+seconds: {20: 10, 40: 10, 60: 30, 80: 60}
+construction_seconds: {20: 2, 40: 3, 60: 6, 80: 10}
+iterations: 12
+proposals_per_batch: 20
+shortlist: 5
+diagnostic_batches: 3
+diagnostic_seconds: 12
+pool_per_slot_signature: 4
+two_charge_layouts: 24
+fleet_combinations: 4096
+routing_fraction_B2: 0.75
+predeclared_median_gain_pct: 0.5
+positive_config_fraction: 0.5
+min_original_configs: 4

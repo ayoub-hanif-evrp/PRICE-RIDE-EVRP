@@ -36,7 +36,7 @@ def evaluate(instance, schedule):
     dropoffs = {r.dropoff: r for r in instance.requests}
     stations = {i: s for s in instance.stations for i in s.node_ids}
     vehicles = {v.id: v for v in instance.vehicles}
-    vehicle_counts = Counter(route.vehicle for route in schedule.routes)
+    vehicle_counts = Counter(route.vehicle for route in schedule.routes if type(route.vehicle) is int)
     served_pickups, served_dropoffs = Counter(), Counter()
     visited_station_nodes, fleet_visits = set(), Counter()
     travel = service = waiting = charging = 0.0
@@ -49,7 +49,7 @@ def evaluate(instance, schedule):
             flag("vehicle_count", "vehicle needs exactly one route", v.id,
                  magnitude=abs(vehicle_counts[v.id]-1))
     for route in schedule.routes:
-        vehicle = vehicles.get(route.vehicle)
+        vehicle = vehicles.get(route.vehicle) if type(route.vehicle) is int else None
         if vehicle is None:
             flag("vehicle_id", "unknown vehicle", route.vehicle)
             continue

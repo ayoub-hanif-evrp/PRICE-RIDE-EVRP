@@ -33,3 +33,21 @@ python -m price_ride.cli data casablanca-path 21037874 4584732034
 ```
 
 The solver and evaluator are separate modules. The frozen [model contract](reports/MODEL_CONTRACT.md) defines feasibility and costing. The [data audit](reports/DATA_AUDIT.md) describes differences among official input files. The [charging audit](reports/CHARGING_OPPORTUNITY_AUDIT.md) records the pilot and its scope. The [handoff](reports/PROMPT_01_HANDOFF.md) lists the files and experimental outcome.
+
+## Stage 2 development
+
+The [Stage 2 protocol](reports/STAGE2_PROTOCOL.md) fixes the original development and held-out inputs, construction limits and comparisons. Run the stages in order from the project root. The campaign reuses recorded starts and results and checks the code/configuration freeze before comparison.
+
+```powershell
+$env:OPENBLAS_NUM_THREADS = '1'
+$env:OMP_NUM_THREADS = '1'
+python -m price_ride.optimization.campaign structural
+python -m price_ride.optimization.campaign starts
+python -m price_ride.optimization.campaign rescue-starts
+python -m price_ride.optimization.campaign diagnostics
+python -m price_ride.optimization.campaign compare
+python -m price_ride.optimization.campaign replay
+python -m price_ride.casablanca.transfer
+```
+
+Stage 2 result files live under `reports/stage2_v1/`. The campaign supports `--root` for a separate project-data workspace.
