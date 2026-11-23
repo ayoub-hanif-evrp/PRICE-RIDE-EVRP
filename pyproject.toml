@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "price-ride"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy==2.2.6",
+    "scipy==1.15.3",
+    "openpyxl==3.1.5",
+    "osmnx==2.0.6",
+    "networkx==3.5",
+    "PyYAML==6.0.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.1"]
+
+[project.scripts]
+price-ride = "price_ride.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["official: integration checks against locally verified original datasets"]
