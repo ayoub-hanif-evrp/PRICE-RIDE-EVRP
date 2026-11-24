@@ -1,0 +1,5486 @@
+{
+  "instance": "r6-60",
+  "requests": 60,
+  "source": "10.5281/zenodo.20707207/ToU/r6-60.txt",
+  "tariff": "ToU",
+  "seed": 11,
+  "model": "porto-v4-conservative-v2",
+  "sha256": "ae77377b03587d49bd9176012ac0da2cd7b74d1f4833c9c28d693398458d117f",
+  "config_sha256": "e0c36dd8d31b2cd86303b726670fab8be17e1d2af28819850304ca47039dcb31",
+  "method": "P",
+  "split": "development",
+  "budget_seconds": 30,
+  "feasible": true,
+  "metrics": {
+    "travel_minutes": 576.4289718332213,
+    "excess_ride_minutes": 32.50923661117674,
+    "service_minutes": 360.0,
+    "waiting_minutes": 1626.6338476351682,
+    "charging_minutes": 141.48711126815425,
+    "charged_kwh": 51.87860746498991,
+    "grid_kwh": 51.87860746498991,
+    "lec_kwh": 0.0,
+    "travel_eur": 207.51442985995968,
+    "user_eur": 10.077863349464788,
+    "energy_eur": 7.2507205153530405,
+    "objective_eur": 224.8430137247775,
+    "legacy_weighted_minutes": 440.4490380277102
+  },
+  "shared_start": "reports/stage2_v1/r6-60/starts/11.json",
+  "construction_seconds": 4.104932600166649,
+  "initial_order_id": "66a12efe8971cc47",
+  "initial_objective_eur": 242.17388069127423,
+  "status": "feasible",
+  "runtime_seconds": 15.397241300204769,
+  "overrun_seconds": 0.0,
+  "timeout": false,
+  "search": {
+    "search_seconds": 11.285886900033802,
+    "budget_hit": false,
+    "routing_deadline_hit": false,
+    "iterations": 12,
+    "trace": [
+      {
+        "kind": "fixed_order_initial",
+        "delta": {
+          "travel_eur": 0.39457088862224055,
+          "user_eur": 0.0,
+          "energy_eur": -3.8058739544960325,
+          "objective_eur": -3.4113030658737955,
+          "travel_minutes": 1.0960302461728588,
+          "excess_ride_minutes": 0.0,
+          "charged_kwh": 0.09864272215552461
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 0,
+        "parent": "66a12efe8971cc47",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": true,
+        "first_changed": false,
+        "blind_ids": [
+          "c186b29bd0fd5184",
+          "61d2096a1788e9ce",
+          "d1e6831dbff7a644",
+          "f3d15795ce8d2b53",
+          "29b3d1d764d803a9"
+        ],
+        "guided_ids": [
+          "c186b29bd0fd5184",
+          "61d2096a1788e9ce",
+          "f3d15795ce8d2b53",
+          "29b3d1d764d803a9",
+          "d1e6831dbff7a644"
+        ],
+        "evaluated": [
+          {
+            "id": "c186b29bd0fd5184",
+            "kind": "paired_relocation",
+            "requests": [
+              29
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.9859397921407549,
+              "neutral": -1.0274273169775388,
+              "guided": -0.8442799698603407,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.8372375668795939,
+              "user_eur": 0.0,
+              "energy_eur": -0.007042402980689921,
+              "objective_eur": -0.8442799698602812,
+              "travel_minutes": -2.3256599079988973,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.20930939171984164
+            }
+          },
+          {
+            "id": "61d2096a1788e9ce",
+            "kind": "paired_relocation",
+            "requests": [
+              43
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.23148339356649217,
+              "neutral": -0.24122402186493908,
+              "guided": 0.41836734663437447,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.16308749505571996,
+              "user_eur": 0.0,
+              "energy_eur": 0.0473957474329767,
+              "objective_eur": 0.2104832424886922,
+              "travel_minutes": 0.45302081959926,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.04077187376392288
+            }
+          },
+          {
+            "id": "f3d15795ce8d2b53",
+            "kind": "paired_exchange",
+            "requests": [
+              29,
+              49
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 1.860416948886666,
+              "neutral": 1.8108099801575843,
+              "guided": 1.9721727826661608,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -1.0301939520812482,
+              "user_eur": 3.0393131262289845,
+              "energy_eur": -0.036946391481551544,
+              "objective_eur": 1.9721727826661777,
+              "travel_minutes": -2.8616498668923214,
+              "excess_ride_minutes": 9.80423589106124,
+              "charged_kwh": -0.25754848802030494
+            }
+          },
+          {
+            "id": "29b3d1d764d803a9",
+            "kind": "paired_relocation",
+            "requests": [
+              29
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 1.913682955359434,
+              "neutral": 1.8663173757943898,
+              "guided": 2.0492627539056754,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.9769279456084234,
+              "user_eur": 3.0393131262289845,
+              "energy_eur": -0.013122426714862634,
+              "objective_eur": 2.04926275390568,
+              "travel_minutes": -2.713688737801135,
+              "excess_ride_minutes": 9.80423589106124,
+              "charged_kwh": -0.24423198640205612
+            }
+          },
+          {
+            "id": "d1e6831dbff7a644",
+            "kind": "paired_relocation",
+            "requests": [
+              43
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 1.3429269634585808,
+              "neutral": 1.399436210975118,
+              "guided": 2.0613039144489704,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 1.7374978520807929,
+              "user_eur": 0.0,
+              "energy_eur": 0.11592195822250062,
+              "objective_eur": 1.8534198103033077,
+              "travel_minutes": 4.826382922446669,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.43437446302023375
+            }
+          }
+        ],
+        "accepted": {
+          "id": "c186b29bd0fd5184",
+          "kind": "paired_relocation",
+          "requests": [
+            29
+          ],
+          "vehicles": [
+            2,
+            4
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -0.9859397921407549,
+            "neutral": -1.0274273169775388,
+            "guided": -0.8442799698603407,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": -0.8372375668795939,
+            "user_eur": 0.0,
+            "energy_eur": -0.007042402980689921,
+            "objective_eur": -0.8442799698602812,
+            "travel_minutes": -2.3256599079988973,
+            "excess_ride_minutes": 0.0,
+            "charged_kwh": -0.20930939171984164
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 1,
+        "parent": "c186b29bd0fd5184",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": true,
+        "first_changed": true,
+        "blind_ids": [
+          "2b63f616041bb357",
+          "ca4ff15227d73ef1",
+          "889158c70ae83bed",
+          "710eddacf4ae2d7a",
+          "bf7d4083144785f9"
+        ],
+        "guided_ids": [
+          "889158c70ae83bed",
+          "2b63f616041bb357",
+          "ca4ff15227d73ef1",
+          "bf7d4083144785f9",
+          "710eddacf4ae2d7a"
+        ],
+        "evaluated": [
+          {
+            "id": "889158c70ae83bed",
+            "kind": "paired_exchange",
+            "requests": [
+              56,
+              24
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.10260787704243057,
+              "neutral": -0.30003480623175527,
+              "guided": -0.30447525336464043,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -4.691797505241709,
+              "user_eur": 4.589189628199287,
+              "energy_eur": -0.20186737632220897,
+              "objective_eur": -0.3044752533646431,
+              "travel_minutes": -13.03277084789363,
+              "excess_ride_minutes": 14.803837510320278,
+              "charged_kwh": -1.1729493763104557
+            }
+          },
+          {
+            "id": "2b63f616041bb357",
+            "kind": "paired_relocation",
+            "requests": [
+              41
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.43386816059518196,
+              "neutral": -0.4521249712362341,
+              "guided": -0.2625773752555176,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.28516593533407786,
+              "user_eur": 0.0,
+              "energy_eur": 0.022588560078561137,
+              "objective_eur": -0.2625773752555176,
+              "travel_minutes": -0.7921275981501594,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.07129148383359762
+            }
+          },
+          {
+            "id": "ca4ff15227d73ef1",
+            "kind": "paired_relocation",
+            "requests": [
+              25
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.32370685856835735,
+              "neutral": -0.3373281734212057,
+              "guided": -0.16336507577592663,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.17500463330722482,
+              "user_eur": 0.0,
+              "energy_eur": 0.011639557531326616,
+              "objective_eur": -0.16336507577588577,
+              "travel_minutes": -0.4861239814089231,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.043751158326870154
+            }
+          },
+          {
+            "id": "bf7d4083144785f9",
+            "kind": "pair_reinsert",
+            "requests": [
+              37
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.19005907691484936,
+              "neutral": 0.19805660448885565,
+              "guided": 0.19833139823756074,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.19005907691484936,
+              "user_eur": 0.0,
+              "energy_eur": 0.008272321322710496,
+              "objective_eur": 0.1983313982375705,
+              "travel_minutes": 0.5279418803190765,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.0475147692286626
+            }
+          },
+          {
+            "id": "710eddacf4ae2d7a",
+            "kind": "paired_relocation",
+            "requests": [
+              43
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.014385269794615851,
+              "neutral": 0.014990589959843703,
+              "guided": 0.21048324248869754,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.16308749505574838,
+              "user_eur": 0.0,
+              "energy_eur": 0.047395747432978474,
+              "objective_eur": 0.21048324248872063,
+              "travel_minutes": 0.4530208195993737,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.04077187376392999
+            }
+          }
+        ],
+        "accepted": {
+          "id": "889158c70ae83bed",
+          "kind": "paired_exchange",
+          "requests": [
+            56,
+            24
+          ],
+          "vehicles": [
+            2,
+            4
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -0.10260787704243057,
+            "neutral": -0.30003480623175527,
+            "guided": -0.30447525336464043,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": -4.691797505241709,
+            "user_eur": 4.589189628199287,
+            "energy_eur": -0.20186737632220897,
+            "objective_eur": -0.3044752533646431,
+            "travel_minutes": -13.03277084789363,
+            "excess_ride_minutes": 14.803837510320278,
+            "charged_kwh": -1.1729493763104557
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 2,
+        "parent": "889158c70ae83bed",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": false,
+        "first_changed": false,
+        "blind_ids": [
+          "5ad06a1eb0579516",
+          "f1671616d10354ec",
+          "b7a898a9a8c72439",
+          "98036143984e4b0d",
+          "3ed7458145de221e"
+        ],
+        "guided_ids": [
+          "5ad06a1eb0579516",
+          "f1671616d10354ec",
+          "b7a898a9a8c72439",
+          "98036143984e4b0d",
+          "3ed7458145de221e"
+        ],
+        "evaluated": [
+          {
+            "id": "5ad06a1eb0579516",
+            "kind": "pair_reinsert",
+            "requests": [
+              23
+            ],
+            "vehicles": [
+              2
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -3.27809110237817,
+              "neutral": -3.2389499032450857,
+              "guided": -3.253162278452633,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.9301799972215008,
+              "user_eur": -4.208271099599671,
+              "energy_eur": 0.024928823925536747,
+              "objective_eur": -3.253162278452635,
+              "travel_minutes": 2.5838333256152737,
+              "excess_ride_minutes": -13.575068063224741,
+              "charged_kwh": 0.2325449993053894
+            }
+          },
+          {
+            "id": "f1671616d10354ec",
+            "kind": "paired_relocation",
+            "requests": [
+              48
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.6412403353809282,
+              "neutral": 0.6682231943268064,
+              "guided": 0.6522150592452078,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.6412403353809282,
+              "user_eur": 0.0,
+              "energy_eur": 0.010974723864280556,
+              "objective_eur": 0.6522150592452078,
+              "travel_minutes": 1.781223153835981,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.16031008384521073
+            }
+          },
+          {
+            "id": "b7a898a9a8c72439",
+            "kind": "pair_reinsert",
+            "requests": [
+              23
+            ],
+            "vehicles": [
+              2
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 1.1423447405966556,
+              "neutral": 1.172847532723118,
+              "guided": 1.1617718085199558,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.7248905941529245,
+              "user_eur": 0.41745414644378087,
+              "energy_eur": 0.01942706792330018,
+              "objective_eur": 1.1617718085200295,
+              "travel_minutes": 2.0135849837581645,
+              "excess_ride_minutes": 1.3466262788509056,
+              "charged_kwh": 0.18122264853825243
+            }
+          },
+          {
+            "id": "98036143984e4b0d",
+            "kind": "paired_exchange",
+            "requests": [
+              58,
+              55
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 2.172782835058456,
+              "neutral": 2.2642117261053496,
+              "guided": 2.3143141959988967,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 2.1727828350584844,
+              "user_eur": 0.0,
+              "energy_eur": 0.14153136094043894,
+              "objective_eur": 2.314314195998918,
+              "travel_minutes": 6.035507875162466,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.54319570876455
+            }
+          },
+          {
+            "id": "3ed7458145de221e",
+            "kind": "paired_relocation",
+            "requests": [
+              17
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 2.3838733715404032,
+              "neutral": 2.4841847764536773,
+              "guided": 3.2286746244495204,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 3.072659325160771,
+              "user_eur": 0.0,
+              "energy_eur": 0.1560152992888062,
+              "objective_eur": 3.2286746244495816,
+              "travel_minutes": 8.535164792113278,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.7681648312901928
+            }
+          }
+        ],
+        "accepted": {
+          "id": "5ad06a1eb0579516",
+          "kind": "pair_reinsert",
+          "requests": [
+            23
+          ],
+          "vehicles": [
+            2
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -3.27809110237817,
+            "neutral": -3.2389499032450857,
+            "guided": -3.253162278452633,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": 0.9301799972215008,
+            "user_eur": -4.208271099599671,
+            "energy_eur": 0.024928823925536747,
+            "objective_eur": -3.253162278452635,
+            "travel_minutes": 2.5838333256152737,
+            "excess_ride_minutes": -13.575068063224741,
+            "charged_kwh": 0.2325449993053894
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 3,
+        "parent": "5ad06a1eb0579516",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": true,
+        "first_changed": false,
+        "blind_ids": [
+          "1b6474afc2004641",
+          "a9cbf8eacbfcc95e",
+          "0ed4c803bfdbbd1c",
+          "262bf61849b6aaf3",
+          "6805020fcea7637c"
+        ],
+        "guided_ids": [
+          "1b6474afc2004641",
+          "a9cbf8eacbfcc95e",
+          "0ed4c803bfdbbd1c",
+          "6805020fcea7637c",
+          "e4adf9d007e1f4d7"
+        ],
+        "evaluated": [
+          {
+            "id": "1b6474afc2004641",
+            "kind": "pair_reinsert",
+            "requests": [
+              52
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -1.5105675560677128,
+              "neutral": -1.5741309800207546,
+              "guided": -1.5763150089455742,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -1.5105675560677412,
+              "user_eur": 0.0,
+              "energy_eur": -0.06574745287786055,
+              "objective_eur": -1.5763150089455849,
+              "travel_minutes": -4.196020989077056,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.37764188901700635
+            }
+          },
+          {
+            "id": "a9cbf8eacbfcc95e",
+            "kind": "paired_relocation",
+            "requests": [
+              45
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.6608306775779056,
+              "neutral": -0.6886378817981562,
+              "guided": -0.7230241059217564,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.6608306775779056,
+              "user_eur": 0.0,
+              "energy_eur": -0.06219342834384989,
+              "objective_eur": -0.7230241059217519,
+              "travel_minutes": -1.8356407710497251,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.1652076693944622
+            }
+          },
+          {
+            "id": "0ed4c803bfdbbd1c",
+            "kind": "paired_relocation",
+            "requests": [
+              4
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.6271389144887962,
+              "neutral": -0.6535283973947266,
+              "guided": 0.09586731087094069,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.4438052237186696,
+              "user_eur": 0.0,
+              "energy_eur": 0.5396725345895534,
+              "objective_eur": 0.09586731087088651,
+              "travel_minutes": -1.2327922881073619,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.1109513059296745
+            }
+          },
+          {
+            "id": "6805020fcea7637c",
+            "kind": "pair_reinsert",
+            "requests": [
+              48
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.35818719136801747,
+              "neutral": 0.37325940989145057,
+              "guided": 0.3737772888722981,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.35818719136798904,
+              "user_eur": 0.0,
+              "energy_eur": 0.01559009750428153,
+              "objective_eur": 0.3737772888722759,
+              "travel_minutes": 0.9949644204666583,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.08954679784193331
+            }
+          },
+          {
+            "id": "e4adf9d007e1f4d7",
+            "kind": "paired_relocation",
+            "requests": [
+              32
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.6018296116140505,
+              "neutral": 0.6271541001460896,
+              "guided": 0.6347001810234509,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.6018296116140505,
+              "user_eur": 0.0,
+              "energy_eur": 0.032870569409400474,
+              "objective_eur": 0.6347001810234474,
+              "travel_minutes": 1.671748921150197,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.15045740290351262
+            }
+          }
+        ],
+        "accepted": {
+          "id": "1b6474afc2004641",
+          "kind": "pair_reinsert",
+          "requests": [
+            52
+          ],
+          "vehicles": [
+            4
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -1.5105675560677128,
+            "neutral": -1.5741309800207546,
+            "guided": -1.5763150089455742,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": -1.5105675560677412,
+            "user_eur": 0.0,
+            "energy_eur": -0.06574745287786055,
+            "objective_eur": -1.5763150089455849,
+            "travel_minutes": -4.196020989077056,
+            "excess_ride_minutes": 0.0,
+            "charged_kwh": -0.37764188901700635
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 4,
+        "parent": "1b6474afc2004641",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": false,
+        "first_changed": false,
+        "blind_ids": [
+          "ac883f7d2e0a717e",
+          "b2bc3c6631fd9a08",
+          "0f7993eb61c786a0",
+          "202a6a1f128283c3",
+          "e10b9c8bedfba8b1"
+        ],
+        "guided_ids": [
+          "ac883f7d2e0a717e",
+          "b2bc3c6631fd9a08",
+          "0f7993eb61c786a0",
+          "202a6a1f128283c3",
+          "e10b9c8bedfba8b1"
+        ],
+        "evaluated": [
+          {
+            "id": "ac883f7d2e0a717e",
+            "kind": "paired_relocation",
+            "requests": [
+              57
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -1.622514630123078,
+              "neutral": -1.6907886936631265,
+              "guided": -1.6534069990613345,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -1.622514630123078,
+              "user_eur": 0.0,
+              "energy_eur": -0.03089236893825653,
+              "objective_eur": -1.6534069990613318,
+              "travel_minutes": -4.506985083675204,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.4056286575307624
+            }
+          },
+          {
+            "id": "b2bc3c6631fd9a08",
+            "kind": "pair_reinsert",
+            "requests": [
+              24
+            ],
+            "vehicles": [
+              2
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.17435224627786283,
+              "neutral": 0.174338023827592,
+              "guided": 0.17434318807406646,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.0003379926790216814,
+              "user_eur": 0.17469023895685076,
+              "energy_eur": -9.058203795930808e-06,
+              "objective_eur": 0.17434318807403315,
+              "travel_minutes": -0.0009388685527937923,
+              "excess_ride_minutes": 0.563516899860808,
+              "charged_kwh": -8.44981697412095e-05
+            }
+          },
+          {
+            "id": "0f7993eb61c786a0",
+            "kind": "paired_relocation",
+            "requests": [
+              30
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.8985598100983339,
+              "neutral": 0.9363704581074366,
+              "guided": 1.0412090020964397,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.8985598100983054,
+              "user_eur": 0.0,
+              "energy_eur": 0.14264919199810588,
+              "objective_eur": 1.0412090020963944,
+              "travel_minutes": 2.4959994724953276,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.2246399525246403
+            }
+          },
+          {
+            "id": "202a6a1f128283c3",
+            "kind": "paired_relocation",
+            "requests": [
+              57
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 1.6934896628617366,
+              "neutral": 1.6185007008590517,
+              "guided": 1.6556516726401265,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -1.7820923735663143,
+              "user_eur": 3.4755820364280154,
+              "energy_eur": -0.03783799022161016,
+              "objective_eur": 1.65565167264009,
+              "travel_minutes": -4.950256593239715,
+              "excess_ride_minutes": 11.211554956219402,
+              "charged_kwh": -0.4455230933915004
+            }
+          },
+          {
+            "id": "e10b9c8bedfba8b1",
+            "kind": "paired_relocation",
+            "requests": [
+              38
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 1.708030681549701,
+              "neutral": 1.7799031892704171,
+              "guided": 1.7986360873959528,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 1.7080306815496726,
+              "user_eur": 0.0,
+              "energy_eur": 0.09060540584625265,
+              "objective_eur": 1.79863608739592,
+              "travel_minutes": 4.74452967097136,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.4270076703874608
+            }
+          }
+        ],
+        "accepted": {
+          "id": "ac883f7d2e0a717e",
+          "kind": "paired_relocation",
+          "requests": [
+            57
+          ],
+          "vehicles": [
+            2,
+            4
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -1.622514630123078,
+            "neutral": -1.6907886936631265,
+            "guided": -1.6534069990613345,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": -1.622514630123078,
+            "user_eur": 0.0,
+            "energy_eur": -0.03089236893825653,
+            "objective_eur": -1.6534069990613318,
+            "travel_minutes": -4.506985083675204,
+            "excess_ride_minutes": 0.0,
+            "charged_kwh": -0.4056286575307624
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 5,
+        "parent": "ac883f7d2e0a717e",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": false,
+        "first_changed": false,
+        "blind_ids": [
+          "3179f141aaeb1a8a",
+          "12c96b27a4593b5e",
+          "6bad110b53dca5c4",
+          "202a6a1f128283c3",
+          "d18850c5146c8ee7"
+        ],
+        "guided_ids": [
+          "3179f141aaeb1a8a",
+          "12c96b27a4593b5e",
+          "6bad110b53dca5c4",
+          "202a6a1f128283c3",
+          "d18850c5146c8ee7"
+        ],
+        "evaluated": [
+          {
+            "id": "3179f141aaeb1a8a",
+            "kind": "paired_relocation",
+            "requests": [
+              45
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.6608306775778772,
+              "neutral": -0.6886378817981225,
+              "guided": -0.7230241059217297,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.6608306775779056,
+              "user_eur": 0.0,
+              "energy_eur": -0.06219342834385255,
+              "objective_eur": -0.7230241059217803,
+              "travel_minutes": -1.8356407710497251,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.1652076693944835
+            }
+          },
+          {
+            "id": "12c96b27a4593b5e",
+            "kind": "paired_relocation",
+            "requests": [
+              35
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.6092178027089119,
+              "neutral": 0.7415136883573776,
+              "guided": 0.685984110702857,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 3.1439758942104845,
+              "user_eur": -2.5347580915015664,
+              "energy_eur": 0.07676630799394601,
+              "objective_eur": 0.6859841107028615,
+              "travel_minutes": 8.733266372806952,
+              "excess_ride_minutes": -8.176639004843764,
+              "charged_kwh": 0.7859939735526495
+            }
+          },
+          {
+            "id": "6bad110b53dca5c4",
+            "kind": "pair_reinsert",
+            "requests": [
+              23
+            ],
+            "vehicles": [
+              2
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 3.27809110237817,
+              "neutral": 3.238949903245085,
+              "guided": 3.2531622784526317,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.9301799972215008,
+              "user_eur": 4.208271099599671,
+              "energy_eur": -0.024928823925536747,
+              "objective_eur": 3.253162278452635,
+              "travel_minutes": -2.5838333256152737,
+              "excess_ride_minutes": 13.575068063224741,
+              "charged_kwh": -0.2325449993053894
+            }
+          },
+          {
+            "id": "202a6a1f128283c3",
+            "kind": "pair_reinsert",
+            "requests": [
+              57
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 3.316004292984843,
+              "neutral": 3.309289394522211,
+              "guided": 3.3090586717014885,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.1595777434432364,
+              "user_eur": 3.4755820364280154,
+              "energy_eur": -0.006945621283353631,
+              "objective_eur": 3.309058671701422,
+              "travel_minutes": -0.4432715095645108,
+              "excess_ride_minutes": 11.211554956219402,
+              "charged_kwh": -0.03989443586073804
+            }
+          },
+          {
+            "id": "d18850c5146c8ee7",
+            "kind": "pair_reinsert",
+            "requests": [
+              39
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 3.3377060284451545,
+              "neutral": 3.366459716977073,
+              "guided": 3.367447689045645,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.6833236209187987,
+              "user_eur": 2.654382407526274,
+              "energy_eur": 0.029741660600491215,
+              "objective_eur": 3.367447689045548,
+              "travel_minutes": 1.898121169218939,
+              "excess_ride_minutes": 8.562523895246045,
+              "charged_kwh": 0.17083090522969968
+            }
+          }
+        ],
+        "accepted": {
+          "id": "3179f141aaeb1a8a",
+          "kind": "paired_relocation",
+          "requests": [
+            45
+          ],
+          "vehicles": [
+            2,
+            4
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -0.6608306775778772,
+            "neutral": -0.6886378817981225,
+            "guided": -0.7230241059217297,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": -0.6608306775779056,
+            "user_eur": 0.0,
+            "energy_eur": -0.06219342834385255,
+            "objective_eur": -0.7230241059217803,
+            "travel_minutes": -1.8356407710497251,
+            "excess_ride_minutes": 0.0,
+            "charged_kwh": -0.1652076693944835
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 6,
+        "parent": "3179f141aaeb1a8a",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": true,
+        "first_changed": false,
+        "blind_ids": [
+          "5eac150640e1eaee",
+          "01d376876231f4fd",
+          "6a8208d6feacbafc",
+          "0e5db8b354b38f80",
+          "6392347c699a78ad"
+        ],
+        "guided_ids": [
+          "5eac150640e1eaee",
+          "01d376876231f4fd",
+          "0e5db8b354b38f80",
+          "6a8208d6feacbafc",
+          "6392347c699a78ad"
+        ],
+        "evaluated": [
+          {
+            "id": "5eac150640e1eaee",
+            "kind": "paired_exchange",
+            "requests": [
+              5,
+              51
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.17930784246621556,
+              "neutral": -0.1868529670539889,
+              "guided": -0.16041588967813425,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.17930784246621556,
+              "user_eur": 0.0,
+              "energy_eur": 0.018891952788081312,
+              "objective_eur": -0.16041588967812004,
+              "travel_minutes": -0.4980773401839542,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.04482696061651126
+            }
+          },
+          {
+            "id": "01d376876231f4fd",
+            "kind": "paired_relocation",
+            "requests": [
+              15
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.191004371757316,
+              "neutral": -0.09238116835857291,
+              "guided": -0.14146878171528776,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 2.343753719744228,
+              "user_eur": -2.5347580915015664,
+              "energy_eur": 0.04953559004202823,
+              "objective_eur": -0.14146878171530375,
+              "travel_minutes": 6.510426999289507,
+              "excess_ride_minutes": -8.176639004843764,
+              "charged_kwh": 0.5859384299360357
+            }
+          },
+          {
+            "id": "0e5db8b354b38f80",
+            "kind": "paired_relocation",
+            "requests": [
+              15
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.6131390897291737,
+              "neutral": 0.7455999798677162,
+              "guided": 0.6842257245390417,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 3.147897181230718,
+              "user_eur": -2.5347580915015664,
+              "energy_eur": 0.07108663480986799,
+              "objective_eur": 0.6842257245390329,
+              "travel_minutes": 8.744158836752035,
+              "excess_ride_minutes": -8.176639004843764,
+              "charged_kwh": 0.7869742953076724
+            }
+          },
+          {
+            "id": "6a8208d6feacbafc",
+            "kind": "paired_relocation",
+            "requests": [
+              38
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.676812247789286,
+              "neutral": 0.705291943166058,
+              "guided": 0.7397809996107583,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.676812247789286,
+              "user_eur": 0.0,
+              "energy_eur": 0.06296875182147321,
+              "objective_eur": 0.7397809996107583,
+              "travel_minutes": 1.8800340216369023,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.16920306194736412
+            }
+          },
+          {
+            "id": "6392347c699a78ad",
+            "kind": "pair_reinsert",
+            "requests": [
+              18
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 2.899622747500189,
+              "neutral": 2.893744692771933,
+              "guided": 2.893542723766016,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.13969037872880108,
+              "user_eur": 3.0393131262289845,
+              "energy_eur": -0.006080023734173601,
+              "objective_eur": 2.893542723766018,
+              "travel_minutes": -0.38802882980223785,
+              "excess_ride_minutes": 9.80423589106124,
+              "charged_kwh": -0.03492259468221448
+            }
+          }
+        ],
+        "accepted": {
+          "id": "5eac150640e1eaee",
+          "kind": "paired_exchange",
+          "requests": [
+            5,
+            51
+          ],
+          "vehicles": [
+            2,
+            4
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -0.17930784246621556,
+            "neutral": -0.1868529670539889,
+            "guided": -0.16041588967813425,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": -0.17930784246621556,
+            "user_eur": 0.0,
+            "energy_eur": 0.018891952788081312,
+            "objective_eur": -0.16041588967812004,
+            "travel_minutes": -0.4980773401839542,
+            "excess_ride_minutes": 0.0,
+            "charged_kwh": -0.04482696061651126
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 7,
+        "parent": "5eac150640e1eaee",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": true,
+        "first_changed": true,
+        "blind_ids": [
+          "55b22e46e1aaa0c7",
+          "1e3512bc04ee47c1",
+          "9de3d0d1e0f455ca",
+          "8f237daad82055c9",
+          "b6e21366ca203d19"
+        ],
+        "guided_ids": [
+          "1e3512bc04ee47c1",
+          "55b22e46e1aaa0c7",
+          "9de3d0d1e0f455ca",
+          "8f237daad82055c9",
+          "b6e21366ca203d19"
+        ],
+        "evaluated": [
+          {
+            "id": "1e3512bc04ee47c1",
+            "kind": "paired_relocation",
+            "requests": [
+              55
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -2.9450731664503564,
+              "neutral": -3.0689993910669564,
+              "guided": -3.079038950273639,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -2.9450731664504417,
+              "user_eur": 0.0,
+              "energy_eur": -0.1339657838232844,
+              "objective_eur": -3.079038950273741,
+              "travel_minutes": -8.180758795695624,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.7362682916126388
+            }
+          },
+          {
+            "id": "55b22e46e1aaa0c7",
+            "kind": "paired_exchange",
+            "requests": [
+              51,
+              6
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -3.076191299133086,
+              "neutral": -3.2056348655078626,
+              "guided": -2.996338200644481,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -1.3127922871217947,
+              "user_eur": 0.0,
+              "energy_eur": -1.6835459135227433,
+              "objective_eur": -2.9963382006445443,
+              "travel_minutes": -3.646645242004979,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.32819807178047
+            }
+          },
+          {
+            "id": "9de3d0d1e0f455ca",
+            "kind": "paired_relocation",
+            "requests": [
+              38
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -1.3908865510102544,
+              "neutral": -1.4494138980046465,
+              "guided": -1.3833321269966232,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -1.3908865510103112,
+              "user_eur": 0.0,
+              "energy_eur": 0.007554424013631156,
+              "objective_eur": -1.3833321269966916,
+              "travel_minutes": -3.86357375280636,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.3477216377526062
+            }
+          },
+          {
+            "id": "8f237daad82055c9",
+            "kind": "paired_relocation",
+            "requests": [
+              55
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.6500079218175188,
+              "neutral": -0.7708276282014666,
+              "guided": -0.7819951805123306,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -2.871247601955332,
+              "user_eur": 2.2212396801377103,
+              "energy_eur": -0.13198725869481187,
+              "objective_eur": -0.781995180512439,
+              "travel_minutes": -7.975687783209196,
+              "excess_ride_minutes": 7.1652892907668075,
+              "charged_kwh": -0.717811900488833
+            }
+          },
+          {
+            "id": "b6e21366ca203d19",
+            "kind": "paired_exchange",
+            "requests": [
+              57,
+              11
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.4795497495352379,
+              "neutral": -0.4997288033708944,
+              "guided": -0.4763511683332533,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.47954974953532314,
+              "user_eur": 0.0,
+              "energy_eur": 0.003198581201984574,
+              "objective_eur": -0.4763511683333377,
+              "travel_minutes": -1.3320826375980914,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.11988743738380947
+            }
+          }
+        ],
+        "accepted": {
+          "id": "1e3512bc04ee47c1",
+          "kind": "paired_relocation",
+          "requests": [
+            55
+          ],
+          "vehicles": [
+            2,
+            4
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -2.9450731664503564,
+            "neutral": -3.0689993910669564,
+            "guided": -3.079038950273639,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": -2.9450731664504417,
+            "user_eur": 0.0,
+            "energy_eur": -0.1339657838232844,
+            "objective_eur": -3.079038950273741,
+            "travel_minutes": -8.180758795695624,
+            "excess_ride_minutes": 0.0,
+            "charged_kwh": -0.7362682916126388
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 8,
+        "parent": "1e3512bc04ee47c1",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": false,
+        "first_changed": false,
+        "blind_ids": [
+          "5ab267fd5e2c6f19",
+          "91e8bf78b341ebfa",
+          "8f237daad82055c9",
+          "7bafcb60c31ec9bd",
+          "35b2721f22dc414a"
+        ],
+        "guided_ids": [
+          "5ab267fd5e2c6f19",
+          "91e8bf78b341ebfa",
+          "8f237daad82055c9",
+          "7bafcb60c31ec9bd",
+          "35b2721f22dc414a"
+        ],
+        "evaluated": [
+          {
+            "id": "5ab267fd5e2c6f19",
+            "kind": "paired_relocation",
+            "requests": [
+              45
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.6608306775779056,
+              "neutral": 0.6886378817981562,
+              "guided": 0.7230241059217581,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.660830677577934,
+              "user_eur": 0.0,
+              "energy_eur": 0.06219342834385344,
+              "objective_eur": 0.7230241059218088,
+              "travel_minutes": 1.8356407710498388,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.1652076693944835
+            }
+          },
+          {
+            "id": "91e8bf78b341ebfa",
+            "kind": "paired_relocation",
+            "requests": [
+              40
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 1.301833837644665,
+              "neutral": 1.3566139206712258,
+              "guided": 1.323789436555642,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 1.3018338376447218,
+              "user_eur": 0.0,
+              "energy_eur": 0.02195559891097787,
+              "objective_eur": 1.3237894365556997,
+              "travel_minutes": 3.616205104568621,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.32545845941119467
+            }
+          },
+          {
+            "id": "8f237daad82055c9",
+            "kind": "pair_reinsert",
+            "requests": [
+              58
+            ],
+            "vehicles": [
+              2
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 2.295065244632852,
+              "neutral": 2.298171762865506,
+              "guided": 2.297043769761324,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.07382556449510957,
+              "user_eur": 2.2212396801377103,
+              "energy_eur": 0.001978525128472519,
+              "objective_eur": 2.297043769761302,
+              "travel_minutes": 0.20507101248642812,
+              "excess_ride_minutes": 7.1652892907668075,
+              "charged_kwh": 0.018456391123805815
+            }
+          },
+          {
+            "id": "7bafcb60c31ec9bd",
+            "kind": "pair_reinsert",
+            "requests": [
+              39
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 3.337706028445126,
+              "neutral": 3.3664597169770394,
+              "guided": 3.3674476890456173,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.6833236209188271,
+              "user_eur": 2.654382407526274,
+              "energy_eur": 0.02974166060049388,
+              "objective_eur": 3.367447689045605,
+              "travel_minutes": 1.898121169218939,
+              "excess_ride_minutes": 8.562523895246045,
+              "charged_kwh": 0.1708309052297281
+            }
+          },
+          {
+            "id": "35b2721f22dc414a",
+            "kind": "pair_reinsert",
+            "requests": [
+              39
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 4.299998140080618,
+              "neutral": 4.322086342303606,
+              "guided": 4.322845289345035,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.5249201439268916,
+              "user_eur": 3.775077996153735,
+              "energy_eur": 0.02284714926441911,
+              "objective_eur": 4.322845289345054,
+              "travel_minutes": 1.4581115109079974,
+              "excess_ride_minutes": 12.177670955334627,
+              "charged_kwh": 0.1312300359817371
+            }
+          }
+        ],
+        "accepted": null
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 9,
+        "parent": "1e3512bc04ee47c1",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": false,
+        "first_changed": false,
+        "blind_ids": [
+          "39b06c016a8564df",
+          "57318b1a05671a94",
+          "6c7d3bc103648870",
+          "c6e6b71c270de42b",
+          "fde9c241ab0d3f72"
+        ],
+        "guided_ids": [
+          "39b06c016a8564df",
+          "57318b1a05671a94",
+          "6c7d3bc103648870",
+          "c6e6b71c270de42b",
+          "fde9c241ab0d3f72"
+        ],
+        "evaluated": [
+          {
+            "id": "39b06c016a8564df",
+            "kind": "paired_relocation",
+            "requests": [
+              25
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.34085715755242063,
+              "neutral": -0.3552001426945921,
+              "guided": -0.310500257381376,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.34085715755242063,
+              "user_eur": 0.0,
+              "energy_eur": 0.030356900171044643,
+              "objective_eur": -0.31050025738136355,
+              "travel_minutes": -0.9468254376456571,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.08521428938808384
+            }
+          },
+          {
+            "id": "57318b1a05671a94",
+            "kind": "pair_reinsert",
+            "requests": [
+              48
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.35818719136801747,
+              "neutral": 0.373259409891455,
+              "guided": 0.3737772888723132,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.35818719136798904,
+              "user_eur": 0.0,
+              "energy_eur": 0.015590097504298406,
+              "objective_eur": 0.3737772888723043,
+              "travel_minutes": 0.9949644204666583,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.0895467978420399
+            }
+          },
+          {
+            "id": "6c7d3bc103648870",
+            "kind": "paired_exchange",
+            "requests": [
+              51,
+              17
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.7578175695384743,
+              "neutral": 0.789705901350013,
+              "guided": 1.0419842592791921,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.8659855532936831,
+              "user_eur": 0.0,
+              "energy_eur": 0.17599870598545309,
+              "objective_eur": 1.041984259279161,
+              "travel_minutes": 2.4055154258157927,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.21649638832347762
+            }
+          },
+          {
+            "id": "c6e6b71c270de42b",
+            "kind": "paired_relocation",
+            "requests": [
+              6
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.9705759080537177,
+              "neutral": 1.0114169334513647,
+              "guided": 1.2219657999631464,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 2.7339749200650942,
+              "user_eur": 0.0,
+              "energy_eur": -1.5120091201019479,
+              "objective_eur": 1.221965799963158,
+              "travel_minutes": 7.594374777958592,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.6834937300162878
+            }
+          },
+          {
+            "id": "fde9c241ab0d3f72",
+            "kind": "paired_relocation",
+            "requests": [
+              25
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 2.3396992519956257,
+              "neutral": 2.2979365675665413,
+              "guided": 2.341694316465012,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.99247888533327,
+              "user_eur": 3.33217813732886,
+              "energy_eur": 0.001995064469387131,
+              "objective_eur": 2.3416943164650093,
+              "travel_minutes": -2.7568857925924704,
+              "excess_ride_minutes": 10.7489617333189,
+              "charged_kwh": -0.24811972133327487
+            }
+          }
+        ],
+        "accepted": {
+          "id": "39b06c016a8564df",
+          "kind": "paired_relocation",
+          "requests": [
+            25
+          ],
+          "vehicles": [
+            2,
+            4
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -0.34085715755242063,
+            "neutral": -0.3552001426945921,
+            "guided": -0.310500257381376,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": -0.34085715755242063,
+            "user_eur": 0.0,
+            "energy_eur": 0.030356900171044643,
+            "objective_eur": -0.31050025738136355,
+            "travel_minutes": -0.9468254376456571,
+            "excess_ride_minutes": 0.0,
+            "charged_kwh": -0.08521428938808384
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 10,
+        "parent": "39b06c016a8564df",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": false,
+        "first_changed": false,
+        "blind_ids": [
+          "0cfa76f1182acc02",
+          "eea2d61ea7772d68",
+          "70dd28c979e89d6f",
+          "fde9c241ab0d3f72",
+          "6ff6704b4dcf5e98"
+        ],
+        "guided_ids": [
+          "0cfa76f1182acc02",
+          "eea2d61ea7772d68",
+          "70dd28c979e89d6f",
+          "fde9c241ab0d3f72",
+          "6ff6704b4dcf5e98"
+        ],
+        "evaluated": [
+          {
+            "id": "0cfa76f1182acc02",
+            "kind": "paired_relocation",
+            "requests": [
+              23
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.17730802353730724,
+              "neutral": -0.1847689974110729,
+              "guided": -0.15684047716592975,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.17730802353730724,
+              "user_eur": 0.0,
+              "energy_eur": 0.020467546371377487,
+              "objective_eur": -0.15684047716592886,
+              "travel_minutes": -0.49252228760360595,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.04432700588437655
+            }
+          },
+          {
+            "id": "eea2d61ea7772d68",
+            "kind": "pair_reinsert",
+            "requests": [
+              40
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.8872595565097043,
+              "neutral": 0.924594699264671,
+              "guided": 0.9258775287067857,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.8872595565096617,
+              "user_eur": 0.0,
+              "energy_eur": 0.038617972197082295,
+              "objective_eur": 0.9258775287067351,
+              "travel_minutes": 2.4646098791935174,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.22181488912741543
+            }
+          },
+          {
+            "id": "70dd28c979e89d6f",
+            "kind": "paired_exchange",
+            "requests": [
+              57,
+              27
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 1.333277057431701,
+              "neutral": 1.3893802449442134,
+              "guided": 1.3159813220501722,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 1.3332770574317578,
+              "user_eur": 0.0,
+              "energy_eur": -0.017295735381527955,
+              "objective_eur": 1.3159813220502201,
+              "travel_minutes": 3.703547381754902,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.33331926435791104
+            }
+          },
+          {
+            "id": "fde9c241ab0d3f72",
+            "kind": "pair_reinsert",
+            "requests": [
+              17
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 2.680556409548032,
+              "neutral": 2.653136710261121,
+              "guided": 2.6521945738463737,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -0.6516217277808494,
+              "user_eur": 3.33217813732886,
+              "energy_eur": -0.028361835701657512,
+              "objective_eur": 2.652194573846373,
+              "travel_minutes": -1.8100603549468133,
+              "excess_ride_minutes": 10.7489617333189,
+              "charged_kwh": -0.16290543194519103
+            }
+          },
+          {
+            "id": "6ff6704b4dcf5e98",
+            "kind": "pair_reinsert",
+            "requests": [
+              9
+            ],
+            "vehicles": [
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 2.65848920694593,
+              "neutral": 2.667155479986455,
+              "guided": 2.6674532517207963,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.20595163181755538,
+              "user_eur": 2.4525375751283693,
+              "energy_eur": 0.00896404477486712,
+              "objective_eur": 2.6674532517207865,
+              "travel_minutes": 0.5720878661599045,
+              "excess_ride_minutes": 7.911411532672155,
+              "charged_kwh": 0.05148790795443148
+            }
+          }
+        ],
+        "accepted": {
+          "id": "0cfa76f1182acc02",
+          "kind": "paired_relocation",
+          "requests": [
+            23
+          ],
+          "vehicles": [
+            2,
+            4
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -0.17730802353730724,
+            "neutral": -0.1847689974110729,
+            "guided": -0.15684047716592975,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": -0.17730802353730724,
+            "user_eur": 0.0,
+            "energy_eur": 0.020467546371377487,
+            "objective_eur": -0.15684047716592886,
+            "travel_minutes": -0.49252228760360595,
+            "excess_ride_minutes": 0.0,
+            "charged_kwh": -0.04432700588437655
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      },
+      {
+        "kind": "paired_batch",
+        "iteration": 11,
+        "parent": "0cfa76f1182acc02",
+        "proposals": 20,
+        "ranked": 20,
+        "shortlist_changed": false,
+        "first_changed": false,
+        "blind_ids": [
+          "5bce06ce839f6f9f",
+          "f8f9dc3e0030b0e8",
+          "3b0bb58c2c60cfb4",
+          "8569e7f348b9fe71",
+          "830cb335ee9cbd6a"
+        ],
+        "guided_ids": [
+          "5bce06ce839f6f9f",
+          "f8f9dc3e0030b0e8",
+          "3b0bb58c2c60cfb4",
+          "8569e7f348b9fe71",
+          "830cb335ee9cbd6a"
+        ],
+        "evaluated": [
+          {
+            "id": "5bce06ce839f6f9f",
+            "kind": "paired_relocation",
+            "requests": [
+              33
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -1.718643358183897,
+              "neutral": -1.7909624384934713,
+              "guided": -1.858104710517492,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -1.7186433581839253,
+              "user_eur": 0.0,
+              "energy_eur": -0.13946135233359502,
+              "objective_eur": -1.858104710517523,
+              "travel_minutes": -4.774009328288685,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.4296608395459103
+            }
+          },
+          {
+            "id": "f8f9dc3e0030b0e8",
+            "kind": "paired_relocation",
+            "requests": [
+              12
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -1.5745053365792216,
+              "neutral": -1.6407592090546874,
+              "guided": -1.7134184871730112,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -1.5745053365792785,
+              "user_eur": 0.0,
+              "energy_eur": -0.1389131505937895,
+              "objective_eur": -1.7134184871730724,
+              "travel_minutes": -4.3736259349424245,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": -0.3936263341447912
+            }
+          },
+          {
+            "id": "3b0bb58c2c60cfb4",
+            "kind": "paired_relocation",
+            "requests": [
+              12
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": -0.4159760408965667,
+              "neutral": -0.5267176395770345,
+              "guided": -0.5832231903962439,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -2.6317441017243652,
+              "user_eur": 2.2157680608277985,
+              "energy_eur": -0.16724714949967723,
+              "objective_eur": -0.5832231903962395,
+              "travel_minutes": -7.310400282567684,
+              "excess_ride_minutes": 7.147638905896123,
+              "charged_kwh": -0.6579360254310558
+            }
+          },
+          {
+            "id": "8569e7f348b9fe71",
+            "kind": "paired_relocation",
+            "requests": [
+              12
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.6621917443023051,
+              "neutral": 0.552972917397053,
+              "guided": 0.49591444013961006,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": -2.595555842881737,
+              "user_eur": 3.2577475871840456,
+              "energy_eur": -0.16627730416269504,
+              "objective_eur": 0.4959144401396145,
+              "travel_minutes": -7.209877341338142,
+              "excess_ride_minutes": 10.508863184464659,
+              "charged_kwh": -0.6488889607204058
+            }
+          },
+          {
+            "id": "830cb335ee9cbd6a",
+            "kind": "paired_relocation",
+            "requests": [
+              48
+            ],
+            "vehicles": [
+              2,
+              4
+            ],
+            "feasible": true,
+            "preview": {
+              "service": 0.641240335380985,
+              "neutral": 0.6682231943268757,
+              "guided": 0.6522150592452798,
+              "fallback": false
+            },
+            "delta": {
+              "travel_eur": 0.6412403353809566,
+              "user_eur": 0.0,
+              "energy_eur": 0.010974723864294766,
+              "objective_eur": 0.6522150592452647,
+              "travel_minutes": 1.781223153835981,
+              "excess_ride_minutes": 0.0,
+              "charged_kwh": 0.1603100838452889
+            }
+          }
+        ],
+        "accepted": {
+          "id": "5bce06ce839f6f9f",
+          "kind": "paired_relocation",
+          "requests": [
+            33
+          ],
+          "vehicles": [
+            2,
+            4
+          ],
+          "feasible": true,
+          "preview": {
+            "service": -1.718643358183897,
+            "neutral": -1.7909624384934713,
+            "guided": -1.858104710517492,
+            "fallback": false
+          },
+          "delta": {
+            "travel_eur": -1.7186433581839253,
+            "user_eur": 0.0,
+            "energy_eur": -0.13946135233359502,
+            "objective_eur": -1.858104710517523,
+            "travel_minutes": -4.774009328288685,
+            "excess_ride_minutes": 0.0,
+            "charged_kwh": -0.4296608395459103
+          },
+          "perturbation": false,
+          "guided_only": false
+        }
+      }
+    ],
+    "counts": {
+      "route_options": 10678,
+      "option_microseconds": 3059678,
+      "options_pruned": 1619,
+      "timing_infeasible_layout": 15233,
+      "fleet_decode_calls": 61,
+      "fleet_combinations": 3904,
+      "station_copy_conflicts": 1952,
+      "independent_replays": 62,
+      "preview_candidates": 240,
+      "ranking_microseconds": 2402326,
+      "option_cache_hits": 268
+    }
+  },
+  "schedule": {
+    "routes": [
+      {
+        "vehicle": 1,
+        "stops": [
+          {
+            "node": 121,
+            "service_start": 0.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 127,
+            "service_start": 0.0,
+            "wait_after": 0.0,
+            "charge": null
+          }
+        ]
+      },
+      {
+        "vehicle": 2,
+        "stops": [
+          {
+            "node": 122,
+            "service_start": 0.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 45,
+            "service_start": 30.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 105,
+            "service_start": 35.776181124586806,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 14,
+            "service_start": 58.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 74,
+            "service_start": 80.00100547670816,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 53,
+            "service_start": 100.4252945314353,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 113,
+            "service_start": 105.89145582015026,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 30,
+            "service_start": 112.58138744529423,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 90,
+            "service_start": 121.85932849879163,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 41,
+            "service_start": 138.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 101,
+            "service_start": 142.78517148145605,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 33,
+            "service_start": 186.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 93,
+            "service_start": 195.73558607324816,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 51,
+            "service_start": 235.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 111,
+            "service_start": 238.84000022727218,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 38,
+            "service_start": 289.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 98,
+            "service_start": 295.722818766045,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 133,
+            "service_start": 309.1758153074829,
+            "wait_after": 0.0,
+            "charge": {
+              "duration": 72.6190397187812,
+              "kwh": 26.62698123021977,
+              "wait_before": 0.0
+            }
+          },
+          {
+            "node": 31,
+            "service_start": 385.7833800563866,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 91,
+            "service_start": 394.15323320583667,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 44,
+            "service_start": 438.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 104,
+            "service_start": 444.4866743634403,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 58,
+            "service_start": 502.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 118,
+            "service_start": 517.9320137333071,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 55,
+            "service_start": 526.3236135135896,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 115,
+            "service_start": 530.3202760021771,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 26,
+            "service_start": 547.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 86,
+            "service_start": 550.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 7,
+            "service_start": 575.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 67,
+            "service_start": 580.467189662189,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 24,
+            "service_start": 984.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 43,
+            "service_start": 987.2826973184832,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 103,
+            "service_start": 994.1176424424121,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 84,
+            "service_start": 998.5925418799723,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 32,
+            "service_start": 1048.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 92,
+            "service_start": 1053.2095563876571,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 3,
+            "service_start": 1074.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 63,
+            "service_start": 1077.9041691089792,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 20,
+            "service_start": 1090.1421231925501,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 80,
+            "service_start": 1105.4963836185589,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 59,
+            "service_start": 1127.597621593778,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 119,
+            "service_start": 1133.3092290798916,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 36,
+            "service_start": 1144.7097545160716,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 96,
+            "service_start": 1148.294530555093,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 22,
+            "service_start": 1182.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 82,
+            "service_start": 1188.8873329407163,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 11,
+            "service_start": 1224.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 71,
+            "service_start": 1232.6599535835421,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 27,
+            "service_start": 1244.64658518915,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 87,
+            "service_start": 1248.5075347155762,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 47,
+            "service_start": 1272.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 107,
+            "service_start": 1275.8338250871222,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 46,
+            "service_start": 1296.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 106,
+            "service_start": 1300.242955622037,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 128,
+            "service_start": 1306.7079153529587,
+            "wait_after": 0.0,
+            "charge": null
+          }
+        ]
+      },
+      {
+        "vehicle": 3,
+        "stops": [
+          {
+            "node": 123,
+            "service_start": 0.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 129,
+            "service_start": 0.0,
+            "wait_after": 0.0,
+            "charge": null
+          }
+        ]
+      },
+      {
+        "vehicle": 4,
+        "stops": [
+          {
+            "node": 124,
+            "service_start": 0.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 21,
+            "service_start": 36.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 81,
+            "service_start": 53.93492608262815,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 60,
+            "service_start": 87.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 120,
+            "service_start": 90.44876027824255,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 48,
+            "service_start": 94.47868135707431,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 108,
+            "service_start": 97.47868135707431,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 49,
+            "service_start": 169.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 109,
+            "service_start": 172.88012254398478,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 40,
+            "service_start": 197.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 100,
+            "service_start": 200.7280201592708,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 23,
+            "service_start": 219.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 83,
+            "service_start": 226.07265820254096,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 2,
+            "service_start": 234.6629017391372,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 62,
+            "service_start": 238.57697978619302,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 5,
+            "service_start": 251.65066565447643,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 65,
+            "service_start": 262.94693579023266,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 54,
+            "service_start": 272.07801918467317,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 114,
+            "service_start": 277.25319994059834,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 35,
+            "service_start": 285.7474256384251,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 15,
+            "service_start": 289.213568926688,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 95,
+            "service_start": 293.4393749095242,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 75,
+            "service_start": 298.85453139086457,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 12,
+            "service_start": 306.60384146319836,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 72,
+            "service_start": 317.3467801987151,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 6,
+            "service_start": 355.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 66,
+            "service_start": 360.9849552788119,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 42,
+            "service_start": 492.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 102,
+            "service_start": 495.8347288867154,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 16,
+            "service_start": 503.4669021012967,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 76,
+            "service_start": 512.9188627943868,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 50,
+            "service_start": 535.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 110,
+            "service_start": 538.506106856635,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 9,
+            "service_start": 558.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 69,
+            "service_start": 563.2391384578885,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 1,
+            "service_start": 613.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 61,
+            "service_start": 617.4887077792215,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 10,
+            "service_start": 688.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 70,
+            "service_start": 694.983060939,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 19,
+            "service_start": 723.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 79,
+            "service_start": 728.0099259291025,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 4,
+            "service_start": 743.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 64,
+            "service_start": 747.1153674673233,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 52,
+            "service_start": 751.4819965778305,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 112,
+            "service_start": 756.8401113583893,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 13,
+            "service_start": 813.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 28,
+            "service_start": 820.7463471259506,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 73,
+            "service_start": 827.7180530882796,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 88,
+            "service_start": 832.4482669230144,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 29,
+            "service_start": 880.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 89,
+            "service_start": 886.2234009690463,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 18,
+            "service_start": 893.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 78,
+            "service_start": 898.6529861697833,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 56,
+            "service_start": 977.6595812272489,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 8,
+            "service_start": 983.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 68,
+            "service_start": 988.2909336672146,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 116,
+            "service_start": 1002.1054900095713,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 39,
+            "service_start": 1210.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 99,
+            "service_start": 1215.3029521745825,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 37,
+            "service_start": 1220.6627318967958,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 97,
+            "service_start": 1224.2149380889648,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 34,
+            "service_start": 1247.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 94,
+            "service_start": 1250.161221043356,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 134,
+            "service_start": 1260.0,
+            "wait_after": 0.0,
+            "charge": {
+              "duration": 68.86807154937304,
+              "kwh": 25.251626234770114,
+              "wait_before": 0.0
+            }
+          },
+          {
+            "node": 17,
+            "service_start": 1351.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 77,
+            "service_start": 1363.2497219667798,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 25,
+            "service_start": 1370.682831404579,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 85,
+            "service_start": 1373.682831404579,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 57,
+            "service_start": 1381.6361572879375,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 117,
+            "service_start": 1391.6922357243172,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 130,
+            "service_start": 1397.8420153835852,
+            "wait_after": 0.0,
+            "charge": null
+          }
+        ]
+      },
+      {
+        "vehicle": 5,
+        "stops": [
+          {
+            "node": 125,
+            "service_start": 0.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 131,
+            "service_start": 0.0,
+            "wait_after": 0.0,
+            "charge": null
+          }
+        ]
+      },
+      {
+        "vehicle": 6,
+        "stops": [
+          {
+            "node": 126,
+            "service_start": 0.0,
+            "wait_after": 0.0,
+            "charge": null
+          },
+          {
+            "node": 132,
+            "service_start": 0.0,
+            "wait_after": 0.0,
+            "charge": null
+          }
+        ]
+      }
+    ]
+  },
+  "evaluation": {
+    "feasible": true,
+    "violations": [],
+    "vehicles": [
+      {
+        "vehicle": 1,
+        "stops": [
+          {
+            "node": 121,
+            "arrival": 0.0,
+            "service_start": 0.0,
+            "departure": 0.0,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 1440.0
+          },
+          {
+            "node": 127,
+            "arrival": 0.0,
+            "service_start": 0.0,
+            "departure": 0.0,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 1440.0
+          }
+        ],
+        "initial_kwh": 40.25,
+        "final_kwh": 40.25,
+        "minimum_kwh": 40.25,
+        "station_visits": [],
+        "within_horizon": true
+      },
+      {
+        "vehicle": 2,
+        "stops": [
+          {
+            "node": 122,
+            "arrival": 0.0,
+            "service_start": 0.0,
+            "departure": 0.0,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 1440.0
+          },
+          {
+            "node": 45,
+            "arrival": 3.5567933041699002,
+            "service_start": 30.0,
+            "departure": 33.0,
+            "load": 1,
+            "arrival_kwh": 39.92988860262471,
+            "departure_kwh": 39.92988860262471,
+            "passengers": [
+              45
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 105,
+            "arrival": 35.776181124586806,
+            "service_start": 35.776181124586806,
+            "departure": 38.776181124586806,
+            "load": 0,
+            "arrival_kwh": 39.68003230141189,
+            "departure_kwh": 39.68003230141189,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 14,
+            "arrival": 42.52120839706386,
+            "service_start": 58.0,
+            "departure": 61.0,
+            "load": 1,
+            "arrival_kwh": 39.34297984688896,
+            "departure_kwh": 39.34297984688896,
+            "passengers": [
+              14
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 74,
+            "arrival": 80.00100547670816,
+            "service_start": 80.00100547670816,
+            "departure": 83.00100547670816,
+            "load": 0,
+            "arrival_kwh": 37.63288935398523,
+            "departure_kwh": 37.63288935398523,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 53,
+            "arrival": 100.4252945314353,
+            "service_start": 100.4252945314353,
+            "departure": 103.4252945314353,
+            "load": 1,
+            "arrival_kwh": 36.06470333905978,
+            "departure_kwh": 36.06470333905978,
+            "passengers": [
+              53
+            ],
+            "slack_minutes": 16.5747054685647
+          },
+          {
+            "node": 113,
+            "arrival": 105.89145582015026,
+            "service_start": 105.89145582015026,
+            "departure": 108.89145582015026,
+            "load": 0,
+            "arrival_kwh": 35.84274882307544,
+            "departure_kwh": 35.84274882307544,
+            "passengers": [],
+            "slack_minutes": 13.574705468564702
+          },
+          {
+            "node": 30,
+            "arrival": 112.58138744529423,
+            "service_start": 112.58138744529423,
+            "departure": 115.58138744529423,
+            "load": 1,
+            "arrival_kwh": 35.51065497681248,
+            "departure_kwh": 35.51065497681248,
+            "passengers": [
+              30
+            ],
+            "slack_minutes": 12.418612554705774
+          },
+          {
+            "node": 90,
+            "arrival": 121.85932849879163,
+            "service_start": 121.85932849879163,
+            "departure": 124.85932849879163,
+            "load": 0,
+            "arrival_kwh": 34.94564028199772,
+            "departure_kwh": 34.94564028199772,
+            "passengers": [],
+            "slack_minutes": 9.418612554705788
+          },
+          {
+            "node": 41,
+            "arrival": 137.71817810409357,
+            "service_start": 138.0,
+            "departure": 141.0,
+            "load": 1,
+            "arrival_kwh": 33.78834381752054,
+            "departure_kwh": 33.78834381752054,
+            "passengers": [
+              41
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 101,
+            "arrival": 142.78517148145605,
+            "service_start": 142.78517148145605,
+            "departure": 145.78517148145605,
+            "load": 0,
+            "arrival_kwh": 33.6276783841895,
+            "departure_kwh": 33.6276783841895,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 33,
+            "arrival": 147.78709846372573,
+            "service_start": 186.0,
+            "departure": 189.0,
+            "load": 1,
+            "arrival_kwh": 33.44750495578523,
+            "departure_kwh": 33.44750495578523,
+            "passengers": [
+              33
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 93,
+            "arrival": 195.73558607324816,
+            "service_start": 195.73558607324816,
+            "departure": 198.73558607324816,
+            "load": 0,
+            "arrival_kwh": 32.84130220919289,
+            "departure_kwh": 32.84130220919289,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 51,
+            "arrival": 211.7658533888913,
+            "service_start": 235.0,
+            "departure": 238.0,
+            "load": 1,
+            "arrival_kwh": 31.668578150785006,
+            "departure_kwh": 31.668578150785006,
+            "passengers": [
+              51
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 111,
+            "arrival": 238.84000022727218,
+            "service_start": 238.84000022727218,
+            "departure": 241.84000022727218,
+            "load": 0,
+            "arrival_kwh": 31.592978130330508,
+            "departure_kwh": 31.592978130330508,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 38,
+            "arrival": 250.4379553335179,
+            "service_start": 289.0,
+            "departure": 292.0,
+            "load": 1,
+            "arrival_kwh": 30.819162170768394,
+            "departure_kwh": 30.819162170768394,
+            "passengers": [
+              38
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 98,
+            "arrival": 295.722818766045,
+            "service_start": 295.722818766045,
+            "departure": 298.722818766045,
+            "load": 0,
+            "arrival_kwh": 30.484108481824343,
+            "departure_kwh": 30.484108481824343,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 133,
+            "arrival": 309.1758153074829,
+            "service_start": 309.1758153074829,
+            "departure": 381.7948550262641,
+            "load": 0,
+            "arrival_kwh": 29.543338793094936,
+            "departure_kwh": 56.1703200233147,
+            "passengers": [],
+            "slack_minutes": 1130.824184692517
+          },
+          {
+            "node": 31,
+            "arrival": 385.7833800563866,
+            "service_start": 385.7833800563866,
+            "departure": 388.7833800563866,
+            "load": 1,
+            "arrival_kwh": 55.811352770603676,
+            "departure_kwh": 55.811352770603676,
+            "passengers": [
+              31
+            ],
+            "slack_minutes": 23.21661994361341
+          },
+          {
+            "node": 91,
+            "arrival": 394.15323320583667,
+            "service_start": 394.15323320583667,
+            "departure": 397.15323320583667,
+            "load": 0,
+            "arrival_kwh": 55.32806598715317,
+            "departure_kwh": 55.32806598715317,
+            "passengers": [],
+            "slack_minutes": 20.21661994361341
+          },
+          {
+            "node": 44,
+            "arrival": 400.75183356397906,
+            "service_start": 438.0,
+            "departure": 441.0,
+            "load": 1,
+            "arrival_kwh": 55.00419195492035,
+            "departure_kwh": 55.00419195492035,
+            "passengers": [
+              44
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 104,
+            "arrival": 444.4866743634403,
+            "service_start": 444.4866743634403,
+            "departure": 447.4866743634403,
+            "load": 0,
+            "arrival_kwh": 54.69039126221073,
+            "departure_kwh": 54.69039126221073,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 58,
+            "arrival": 448.32345865012564,
+            "service_start": 502.0,
+            "departure": 505.0,
+            "load": 1,
+            "arrival_kwh": 54.61508067640905,
+            "departure_kwh": 54.61508067640905,
+            "passengers": [
+              58
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 118,
+            "arrival": 517.9320137333071,
+            "service_start": 517.9320137333071,
+            "departure": 520.9320137333071,
+            "load": 0,
+            "arrival_kwh": 53.45119944041141,
+            "departure_kwh": 53.45119944041141,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 55,
+            "arrival": 526.3236135135896,
+            "service_start": 526.3236135135896,
+            "departure": 529.3236135135896,
+            "load": 1,
+            "arrival_kwh": 52.96595546018598,
+            "departure_kwh": 52.96595546018598,
+            "passengers": [
+              55
+            ],
+            "slack_minutes": 19.676386486410365
+          },
+          {
+            "node": 115,
+            "arrival": 530.3202760021771,
+            "service_start": 530.3202760021771,
+            "departure": 533.3202760021771,
+            "load": 0,
+            "arrival_kwh": 52.87625583621311,
+            "departure_kwh": 52.87625583621311,
+            "passengers": [],
+            "slack_minutes": 16.676386486410365
+          },
+          {
+            "node": 26,
+            "arrival": 534.6222396116232,
+            "service_start": 547.0,
+            "departure": 550.0,
+            "load": 1,
+            "arrival_kwh": 52.759079111362965,
+            "departure_kwh": 52.759079111362965,
+            "passengers": [
+              26
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 86,
+            "arrival": 550.0,
+            "service_start": 550.0,
+            "departure": 553.0,
+            "load": 0,
+            "arrival_kwh": 52.759079111362965,
+            "departure_kwh": 52.759079111362965,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 7,
+            "arrival": 556.4924909551488,
+            "service_start": 575.0,
+            "departure": 578.0,
+            "load": 1,
+            "arrival_kwh": 52.44475492539957,
+            "departure_kwh": 52.44475492539957,
+            "passengers": [
+              7
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 67,
+            "arrival": 580.467189662189,
+            "service_start": 580.467189662189,
+            "departure": 583.467189662189,
+            "load": 0,
+            "arrival_kwh": 52.22270785580257,
+            "departure_kwh": 52.22270785580257,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 24,
+            "arrival": 596.0263075055869,
+            "service_start": 984.0,
+            "departure": 987.0,
+            "load": 1,
+            "arrival_kwh": 51.09238724989675,
+            "departure_kwh": 51.09238724989675,
+            "passengers": [
+              24
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 43,
+            "arrival": 987.2826973184832,
+            "service_start": 987.2826973184832,
+            "departure": 990.2826973184832,
+            "load": 2,
+            "arrival_kwh": 51.066944491233265,
+            "departure_kwh": 51.066944491233265,
+            "passengers": [
+              24,
+              43
+            ],
+            "slack_minutes": 14.717302681516799
+          },
+          {
+            "node": 103,
+            "arrival": 994.1176424424121,
+            "service_start": 994.1176424424121,
+            "departure": 997.1176424424121,
+            "load": 1,
+            "arrival_kwh": 50.721799430079656,
+            "departure_kwh": 50.721799430079656,
+            "passengers": [
+              24
+            ],
+            "slack_minutes": 11.717302681516799
+          },
+          {
+            "node": 84,
+            "arrival": 998.5925418799723,
+            "service_start": 998.5925418799723,
+            "departure": 1001.5925418799723,
+            "load": 0,
+            "arrival_kwh": 50.589058480699244,
+            "departure_kwh": 50.589058480699244,
+            "passengers": [],
+            "slack_minutes": 19.55290576688219
+          },
+          {
+            "node": 32,
+            "arrival": 1005.625441191217,
+            "service_start": 1048.0,
+            "departure": 1051.0,
+            "load": 1,
+            "arrival_kwh": 50.22609754268722,
+            "departure_kwh": 50.22609754268722,
+            "passengers": [
+              32
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 92,
+            "arrival": 1053.2095563876571,
+            "service_start": 1053.2095563876571,
+            "departure": 1056.2095563876571,
+            "load": 0,
+            "arrival_kwh": 50.02723746779809,
+            "departure_kwh": 50.02723746779809,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 3,
+            "arrival": 1064.061231577036,
+            "service_start": 1074.0,
+            "departure": 1077.0,
+            "load": 1,
+            "arrival_kwh": 49.32058670075398,
+            "departure_kwh": 49.32058670075398,
+            "passengers": [
+              3
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 63,
+            "arrival": 1077.9041691089792,
+            "service_start": 1077.9041691089792,
+            "departure": 1080.9041691089792,
+            "load": 0,
+            "arrival_kwh": 49.23921148094585,
+            "departure_kwh": 49.23921148094585,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 20,
+            "arrival": 1090.1421231925501,
+            "service_start": 1090.1421231925501,
+            "departure": 1093.1421231925501,
+            "load": 1,
+            "arrival_kwh": 48.407795613424454,
+            "departure_kwh": 48.407795613424454,
+            "passengers": [
+              20
+            ],
+            "slack_minutes": 14.857876807449884
+          },
+          {
+            "node": 80,
+            "arrival": 1105.4963836185589,
+            "service_start": 1105.4963836185589,
+            "departure": 1108.4963836185589,
+            "load": 0,
+            "arrival_kwh": 47.29591217508367,
+            "departure_kwh": 47.29591217508367,
+            "passengers": [],
+            "slack_minutes": 11.857876807449884
+          },
+          {
+            "node": 59,
+            "arrival": 1127.597621593778,
+            "service_start": 1127.597621593778,
+            "departure": 1130.597621593778,
+            "load": 1,
+            "arrival_kwh": 45.57680075731395,
+            "departure_kwh": 45.57680075731395,
+            "passengers": [
+              59
+            ],
+            "slack_minutes": 10.402378406221942
+          },
+          {
+            "node": 119,
+            "arrival": 1133.3092290798916,
+            "service_start": 1133.3092290798916,
+            "departure": 1136.3092290798916,
+            "load": 0,
+            "arrival_kwh": 45.33275608356373,
+            "departure_kwh": 45.33275608356373,
+            "passengers": [],
+            "slack_minutes": 7.402378406221942
+          },
+          {
+            "node": 36,
+            "arrival": 1144.7097545160716,
+            "service_start": 1144.7097545160716,
+            "departure": 1147.7097545160716,
+            "load": 1,
+            "arrival_kwh": 44.57670879430752,
+            "departure_kwh": 44.57670879430752,
+            "passengers": [
+              36
+            ],
+            "slack_minutes": 17.290245483928402
+          },
+          {
+            "node": 96,
+            "arrival": 1148.294530555093,
+            "service_start": 1148.294530555093,
+            "departure": 1151.294530555093,
+            "load": 0,
+            "arrival_kwh": 44.524078950795605,
+            "departure_kwh": 44.524078950795605,
+            "passengers": [],
+            "slack_minutes": 14.290245483928402
+          },
+          {
+            "node": 22,
+            "arrival": 1162.80877509429,
+            "service_start": 1182.0,
+            "departure": 1185.0,
+            "load": 1,
+            "arrival_kwh": 43.48779694226788,
+            "departure_kwh": 43.48779694226788,
+            "passengers": [
+              22
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 82,
+            "arrival": 1188.8873329407163,
+            "service_start": 1188.8873329407163,
+            "departure": 1191.8873329407163,
+            "load": 0,
+            "arrival_kwh": 43.1379369776034,
+            "departure_kwh": 43.1379369776034,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 11,
+            "arrival": 1198.1536335554995,
+            "service_start": 1224.0,
+            "departure": 1227.0,
+            "load": 1,
+            "arrival_kwh": 42.57396992227291,
+            "departure_kwh": 42.57396992227291,
+            "passengers": [
+              11
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 71,
+            "arrival": 1232.6599535835421,
+            "service_start": 1232.6599535835421,
+            "departure": 1235.6599535835421,
+            "load": 0,
+            "arrival_kwh": 42.06457409975412,
+            "departure_kwh": 42.06457409975412,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 27,
+            "arrival": 1244.64658518915,
+            "service_start": 1244.64658518915,
+            "departure": 1247.64658518915,
+            "load": 1,
+            "arrival_kwh": 41.25577725524941,
+            "departure_kwh": 41.25577725524941,
+            "passengers": [
+              27
+            ],
+            "slack_minutes": 5.353414810849927
+          },
+          {
+            "node": 87,
+            "arrival": 1248.5075347155762,
+            "service_start": 1248.5075347155762,
+            "departure": 1251.5075347155762,
+            "load": 0,
+            "arrival_kwh": 41.178291797871054,
+            "departure_kwh": 41.178291797871054,
+            "passengers": [],
+            "slack_minutes": 2.3534148108499267
+          },
+          {
+            "node": 47,
+            "arrival": 1252.9310492059972,
+            "service_start": 1272.0,
+            "departure": 1275.0,
+            "load": 1,
+            "arrival_kwh": 41.050175493733164,
+            "departure_kwh": 41.050175493733164,
+            "passengers": [
+              47
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 107,
+            "arrival": 1275.8338250871222,
+            "service_start": 1275.8338250871222,
+            "departure": 1278.8338250871222,
+            "load": 0,
+            "arrival_kwh": 40.97513123589215,
+            "departure_kwh": 40.97513123589215,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 46,
+            "arrival": 1282.1829234662987,
+            "service_start": 1296.0,
+            "departure": 1299.0,
+            "load": 1,
+            "arrival_kwh": 40.67371238176626,
+            "departure_kwh": 40.67371238176626,
+            "passengers": [
+              46
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 106,
+            "arrival": 1300.242955622037,
+            "service_start": 1300.242955622037,
+            "departure": 1303.242955622037,
+            "load": 0,
+            "arrival_kwh": 40.561846375782935,
+            "departure_kwh": 40.561846375782935,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 128,
+            "arrival": 1306.7079153529587,
+            "service_start": 1306.7079153529587,
+            "departure": 1306.7079153529587,
+            "load": 0,
+            "arrival_kwh": 40.24999999999998,
+            "departure_kwh": 40.24999999999998,
+            "passengers": [],
+            "slack_minutes": 133.2920846470413
+          }
+        ],
+        "initial_kwh": 40.25,
+        "final_kwh": 40.24999999999998,
+        "minimum_kwh": 29.543338793094936,
+        "station_visits": [
+          133
+        ],
+        "within_horizon": true
+      },
+      {
+        "vehicle": 3,
+        "stops": [
+          {
+            "node": 123,
+            "arrival": 0.0,
+            "service_start": 0.0,
+            "departure": 0.0,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 1440.0
+          },
+          {
+            "node": 129,
+            "arrival": 0.0,
+            "service_start": 0.0,
+            "departure": 0.0,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 1440.0
+          }
+        ],
+        "initial_kwh": 40.25,
+        "final_kwh": 40.25,
+        "minimum_kwh": 40.25,
+        "station_visits": [],
+        "within_horizon": true
+      },
+      {
+        "vehicle": 4,
+        "stops": [
+          {
+            "node": 124,
+            "arrival": 0.0,
+            "service_start": 0.0,
+            "departure": 0.0,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 1440.0
+          },
+          {
+            "node": 21,
+            "arrival": 5.228834105656853,
+            "service_start": 36.0,
+            "departure": 39.0,
+            "load": 1,
+            "arrival_kwh": 39.779404930490884,
+            "departure_kwh": 39.779404930490884,
+            "passengers": [
+              21
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 81,
+            "arrival": 53.93492608262815,
+            "service_start": 53.93492608262815,
+            "departure": 56.93492608262815,
+            "load": 0,
+            "arrival_kwh": 38.43526158305435,
+            "departure_kwh": 38.43526158305435,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 60,
+            "arrival": 78.57988296544269,
+            "service_start": 87.0,
+            "departure": 90.0,
+            "load": 1,
+            "arrival_kwh": 36.48721546360104,
+            "departure_kwh": 36.48721546360104,
+            "passengers": [
+              60
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 120,
+            "arrival": 90.44876027824255,
+            "service_start": 90.44876027824255,
+            "departure": 93.44876027824255,
+            "load": 0,
+            "arrival_kwh": 36.44682703855921,
+            "departure_kwh": 36.44682703855921,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 48,
+            "arrival": 94.47868135707431,
+            "service_start": 94.47868135707431,
+            "departure": 97.47868135707431,
+            "load": 1,
+            "arrival_kwh": 36.35413414146436,
+            "departure_kwh": 36.35413414146436,
+            "passengers": [
+              48
+            ],
+            "slack_minutes": 24.521318642925692
+          },
+          {
+            "node": 108,
+            "arrival": 97.47868135707431,
+            "service_start": 97.47868135707431,
+            "departure": 100.47868135707431,
+            "load": 0,
+            "arrival_kwh": 36.35413414146436,
+            "departure_kwh": 36.35413414146436,
+            "passengers": [],
+            "slack_minutes": 21.521318642925692
+          },
+          {
+            "node": 49,
+            "arrival": 102.31248869055214,
+            "service_start": 169.0,
+            "departure": 172.0,
+            "load": 1,
+            "arrival_kwh": 36.18909148145135,
+            "departure_kwh": 36.18909148145135,
+            "passengers": [
+              49
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 109,
+            "arrival": 172.88012254398478,
+            "service_start": 172.88012254398478,
+            "departure": 175.88012254398478,
+            "load": 0,
+            "arrival_kwh": 36.10988045249272,
+            "departure_kwh": 36.10988045249272,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 40,
+            "arrival": 178.38096701886806,
+            "service_start": 197.0,
+            "departure": 200.0,
+            "load": 1,
+            "arrival_kwh": 35.884804449753226,
+            "departure_kwh": 35.884804449753226,
+            "passengers": [
+              40
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 100,
+            "arrival": 200.7280201592708,
+            "service_start": 200.7280201592708,
+            "departure": 203.7280201592708,
+            "load": 0,
+            "arrival_kwh": 35.81928263541885,
+            "departure_kwh": 35.81928263541885,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 23,
+            "arrival": 206.05985043494104,
+            "service_start": 219.0,
+            "departure": 222.0,
+            "load": 1,
+            "arrival_kwh": 35.60941791060853,
+            "departure_kwh": 35.60941791060853,
+            "passengers": [
+              23
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 83,
+            "arrival": 226.07265820254096,
+            "service_start": 226.07265820254096,
+            "departure": 229.07265820254096,
+            "load": 0,
+            "arrival_kwh": 35.242878672379845,
+            "departure_kwh": 35.242878672379845,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 2,
+            "arrival": 234.6629017391372,
+            "service_start": 234.6629017391372,
+            "departure": 237.6629017391372,
+            "load": 1,
+            "arrival_kwh": 34.73975675408619,
+            "departure_kwh": 34.73975675408619,
+            "passengers": [
+              2
+            ],
+            "slack_minutes": 16.337098260862803
+          },
+          {
+            "node": 62,
+            "arrival": 238.57697978619302,
+            "service_start": 238.57697978619302,
+            "departure": 241.57697978619302,
+            "load": 0,
+            "arrival_kwh": 34.657489729851164,
+            "departure_kwh": 34.657489729851164,
+            "passengers": [],
+            "slack_minutes": 13.337098260862803
+          },
+          {
+            "node": 5,
+            "arrival": 251.65066565447643,
+            "service_start": 251.65066565447643,
+            "departure": 254.65066565447643,
+            "load": 1,
+            "arrival_kwh": 33.75085800170566,
+            "departure_kwh": 33.75085800170566,
+            "passengers": [
+              5
+            ],
+            "slack_minutes": 18.349334345523573
+          },
+          {
+            "node": 65,
+            "arrival": 262.94693579023266,
+            "service_start": 262.94693579023266,
+            "departure": 265.94693579023266,
+            "load": 0,
+            "arrival_kwh": 33.00419368948759,
+            "departure_kwh": 33.00419368948759,
+            "passengers": [],
+            "slack_minutes": 15.349334345523573
+          },
+          {
+            "node": 54,
+            "arrival": 272.07801918467317,
+            "service_start": 272.07801918467317,
+            "departure": 275.07801918467317,
+            "load": 1,
+            "arrival_kwh": 32.45239618398795,
+            "departure_kwh": 32.45239618398795,
+            "passengers": [
+              54
+            ],
+            "slack_minutes": 10.921980815326833
+          },
+          {
+            "node": 114,
+            "arrival": 277.25319994059834,
+            "service_start": 277.25319994059834,
+            "departure": 280.25319994059834,
+            "load": 0,
+            "arrival_kwh": 32.25662991595468,
+            "departure_kwh": 32.25662991595468,
+            "passengers": [],
+            "slack_minutes": 7.921980815326833
+          },
+          {
+            "node": 35,
+            "arrival": 285.7474256384251,
+            "service_start": 285.7474256384251,
+            "departure": 288.7474256384251,
+            "load": 1,
+            "arrival_kwh": 31.762149603150274,
+            "departure_kwh": 31.762149603150274,
+            "passengers": [
+              35
+            ],
+            "slack_minutes": 9.252574361574887
+          },
+          {
+            "node": 15,
+            "arrival": 289.213568926688,
+            "service_start": 289.213568926688,
+            "departure": 292.213568926688,
+            "load": 2,
+            "arrival_kwh": 31.72019670720661,
+            "departure_kwh": 31.72019670720661,
+            "passengers": [
+              15,
+              35
+            ],
+            "slack_minutes": 24.786431073311974
+          },
+          {
+            "node": 95,
+            "arrival": 293.4393749095242,
+            "service_start": 293.4393749095242,
+            "departure": 296.4393749095242,
+            "load": 1,
+            "arrival_kwh": 31.609874168751354,
+            "departure_kwh": 31.609874168751354,
+            "passengers": [
+              15
+            ],
+            "slack_minutes": 2.320287785049061
+          },
+          {
+            "node": 75,
+            "arrival": 298.85453139086457,
+            "service_start": 298.85453139086457,
+            "departure": 301.85453139086457,
+            "load": 0,
+            "arrival_kwh": 31.39251008543072,
+            "departure_kwh": 31.39251008543072,
+            "passengers": [],
+            "slack_minutes": 17.542078644994035
+          },
+          {
+            "node": 12,
+            "arrival": 306.60384146319836,
+            "service_start": 306.60384146319836,
+            "departure": 309.60384146319836,
+            "load": 1,
+            "arrival_kwh": 30.965072178920682,
+            "departure_kwh": 30.965072178920682,
+            "passengers": [
+              12
+            ],
+            "slack_minutes": 14.396158536801636
+          },
+          {
+            "node": 72,
+            "arrival": 317.3467801987151,
+            "service_start": 317.3467801987151,
+            "departure": 320.3467801987151,
+            "load": 0,
+            "arrival_kwh": 30.268207692724175,
+            "departure_kwh": 30.268207692724175,
+            "passengers": [],
+            "slack_minutes": 11.396158536801636
+          },
+          {
+            "node": 6,
+            "arrival": 327.7316409771474,
+            "service_start": 355.0,
+            "departure": 358.0,
+            "load": 1,
+            "arrival_kwh": 29.603570222665272,
+            "departure_kwh": 29.603570222665272,
+            "passengers": [
+              6
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 66,
+            "arrival": 360.9849552788119,
+            "service_start": 360.9849552788119,
+            "departure": 363.9849552788119,
+            "load": 0,
+            "arrival_kwh": 29.334924247572197,
+            "departure_kwh": 29.334924247572197,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 42,
+            "arrival": 374.31617497047796,
+            "service_start": 492.0,
+            "departure": 495.0,
+            "load": 1,
+            "arrival_kwh": 28.405114475322254,
+            "departure_kwh": 28.405114475322254,
+            "passengers": [
+              42
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 102,
+            "arrival": 495.8347288867154,
+            "service_start": 495.8347288867154,
+            "departure": 498.8347288867154,
+            "load": 0,
+            "arrival_kwh": 28.329988875517866,
+            "departure_kwh": 28.329988875517866,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 16,
+            "arrival": 503.4669021012967,
+            "service_start": 503.4669021012967,
+            "departure": 506.4669021012967,
+            "load": 1,
+            "arrival_kwh": 27.913093286205555,
+            "departure_kwh": 27.913093286205555,
+            "passengers": [
+              16
+            ],
+            "slack_minutes": 23.533097898703318
+          },
+          {
+            "node": 76,
+            "arrival": 512.9188627943868,
+            "service_start": 512.9188627943868,
+            "departure": 515.9188627943868,
+            "load": 0,
+            "arrival_kwh": 27.332416823827444,
+            "departure_kwh": 27.332416823827444,
+            "passengers": [],
+            "slack_minutes": 20.533097898703318
+          },
+          {
+            "node": 50,
+            "arrival": 516.1023048815484,
+            "service_start": 535.0,
+            "departure": 538.0,
+            "load": 1,
+            "arrival_kwh": 27.315907035982892,
+            "departure_kwh": 27.315907035982892,
+            "passengers": [
+              50
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 110,
+            "arrival": 538.506106856635,
+            "service_start": 538.506106856635,
+            "departure": 541.506106856635,
+            "load": 0,
+            "arrival_kwh": 27.27035741888574,
+            "departure_kwh": 27.27035741888574,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 9,
+            "arrival": 542.8088593779029,
+            "service_start": 558.0,
+            "departure": 561.0,
+            "load": 1,
+            "arrival_kwh": 27.15310969197164,
+            "departure_kwh": 27.15310969197164,
+            "passengers": [
+              9
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 69,
+            "arrival": 563.2391384578885,
+            "service_start": 563.2391384578885,
+            "departure": 566.2391384578885,
+            "load": 0,
+            "arrival_kwh": 26.951587230761675,
+            "departure_kwh": 26.951587230761675,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 1,
+            "arrival": 570.1599430063824,
+            "service_start": 613.0,
+            "departure": 616.0,
+            "load": 1,
+            "arrival_kwh": 26.598714821397227,
+            "departure_kwh": 26.598714821397227,
+            "passengers": [
+              1
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 61,
+            "arrival": 617.4887077792215,
+            "service_start": 617.4887077792215,
+            "departure": 620.4887077792215,
+            "load": 0,
+            "arrival_kwh": 26.464731121267288,
+            "departure_kwh": 26.464731121267288,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 10,
+            "arrival": 622.750063545982,
+            "service_start": 688.0,
+            "departure": 691.0,
+            "load": 1,
+            "arrival_kwh": 26.261209102258842,
+            "departure_kwh": 26.261209102258842,
+            "passengers": [
+              10
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 70,
+            "arrival": 694.983060939,
+            "service_start": 694.983060939,
+            "departure": 697.983060939,
+            "load": 0,
+            "arrival_kwh": 25.902733617748847,
+            "departure_kwh": 25.902733617748847,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 19,
+            "arrival": 699.2192622129395,
+            "service_start": 723.0,
+            "departure": 726.0,
+            "load": 1,
+            "arrival_kwh": 25.79147550309429,
+            "departure_kwh": 25.79147550309429,
+            "passengers": [
+              19
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 79,
+            "arrival": 728.0099259291025,
+            "service_start": 728.0099259291025,
+            "departure": 731.0099259291025,
+            "load": 0,
+            "arrival_kwh": 25.610582169475066,
+            "departure_kwh": 25.610582169475066,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 4,
+            "arrival": 736.8961539099536,
+            "service_start": 743.0,
+            "departure": 746.0,
+            "load": 1,
+            "arrival_kwh": 25.08082165119847,
+            "departure_kwh": 25.08082165119847,
+            "passengers": [
+              4
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 64,
+            "arrival": 747.1153674673233,
+            "service_start": 747.1153674673233,
+            "departure": 750.1153674673233,
+            "load": 0,
+            "arrival_kwh": 24.98043857913938,
+            "departure_kwh": 24.98043857913938,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 52,
+            "arrival": 751.4819965778305,
+            "service_start": 751.4819965778305,
+            "departure": 754.4819965778305,
+            "load": 1,
+            "arrival_kwh": 24.85744195919373,
+            "departure_kwh": 24.85744195919373,
+            "passengers": [
+              52
+            ],
+            "slack_minutes": 13.5180034221695
+          },
+          {
+            "node": 112,
+            "arrival": 756.8401113583893,
+            "service_start": 756.8401113583893,
+            "departure": 759.8401113583893,
+            "load": 0,
+            "arrival_kwh": 24.645211628943436,
+            "departure_kwh": 24.645211628943436,
+            "passengers": [],
+            "slack_minutes": 10.5180034221695
+          },
+          {
+            "node": 13,
+            "arrival": 763.2214113387516,
+            "service_start": 813.0,
+            "departure": 816.0,
+            "load": 1,
+            "arrival_kwh": 24.340894630710828,
+            "departure_kwh": 24.340894630710828,
+            "passengers": [
+              13
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 28,
+            "arrival": 820.7463471259506,
+            "service_start": 820.7463471259506,
+            "departure": 823.7463471259506,
+            "load": 2,
+            "arrival_kwh": 23.913723389375278,
+            "departure_kwh": 23.913723389375278,
+            "passengers": [
+              13,
+              28
+            ],
+            "slack_minutes": 15.253652874049408
+          },
+          {
+            "node": 73,
+            "arrival": 827.7180530882796,
+            "service_start": 827.7180530882796,
+            "departure": 830.7180530882796,
+            "load": 1,
+            "arrival_kwh": 23.556269852765674,
+            "departure_kwh": 23.556269852765674,
+            "passengers": [
+              28
+            ],
+            "slack_minutes": 21.591129788793864
+          },
+          {
+            "node": 88,
+            "arrival": 832.4482669230144,
+            "service_start": 832.4482669230144,
+            "departure": 835.4482669230144,
+            "load": 0,
+            "arrival_kwh": 23.40055060763954,
+            "departure_kwh": 23.40055060763954,
+            "passengers": [],
+            "slack_minutes": 8.133762989242769
+          },
+          {
+            "node": 29,
+            "arrival": 837.4194200909066,
+            "service_start": 880.0,
+            "departure": 883.0,
+            "load": 1,
+            "arrival_kwh": 23.22314682252925,
+            "departure_kwh": 23.22314682252925,
+            "passengers": [
+              29
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 89,
+            "arrival": 886.2234009690463,
+            "service_start": 886.2234009690463,
+            "departure": 889.2234009690463,
+            "load": 0,
+            "arrival_kwh": 22.933040735315082,
+            "departure_kwh": 22.933040735315082,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 18,
+            "arrival": 891.3195333294781,
+            "service_start": 893.0,
+            "departure": 896.0,
+            "load": 1,
+            "arrival_kwh": 22.74438882287623,
+            "departure_kwh": 22.74438882287623,
+            "passengers": [
+              18
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 78,
+            "arrival": 898.6529861697833,
+            "service_start": 898.6529861697833,
+            "departure": 901.6529861697833,
+            "load": 0,
+            "arrival_kwh": 22.505620067595732,
+            "departure_kwh": 22.505620067595732,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 56,
+            "arrival": 902.3130311120324,
+            "service_start": 977.6595812272489,
+            "departure": 980.6595812272489,
+            "load": 1,
+            "arrival_kwh": 22.44621602279331,
+            "departure_kwh": 22.44621602279331,
+            "passengers": [
+              56
+            ],
+            "slack_minutes": 18.34041877275115
+          },
+          {
+            "node": 8,
+            "arrival": 983.0,
+            "service_start": 983.0,
+            "departure": 986.0,
+            "load": 2,
+            "arrival_kwh": 22.23557833324571,
+            "departure_kwh": 22.23557833324571,
+            "passengers": [
+              8,
+              56
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 68,
+            "arrival": 988.2909336672146,
+            "service_start": 988.2909336672146,
+            "departure": 991.2909336672146,
+            "load": 1,
+            "arrival_kwh": 22.02939430319639,
+            "departure_kwh": 22.02939430319639,
+            "passengers": [
+              56
+            ],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 116,
+            "arrival": 1002.1054900095713,
+            "service_start": 1002.1054900095713,
+            "departure": 1005.1054900095713,
+            "load": 0,
+            "arrival_kwh": 21.056084232384293,
+            "departure_kwh": 21.056084232384293,
+            "passengers": [],
+            "slack_minutes": 7.983675495548596
+          },
+          {
+            "node": 39,
+            "arrival": 1015.9257197610978,
+            "service_start": 1210.0,
+            "departure": 1213.0,
+            "load": 1,
+            "arrival_kwh": 20.082263554746913,
+            "departure_kwh": 20.082263554746913,
+            "passengers": [
+              39
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 99,
+            "arrival": 1215.3029521745825,
+            "service_start": 1215.3029521745825,
+            "departure": 1218.3029521745825,
+            "load": 0,
+            "arrival_kwh": 19.874997859034476,
+            "departure_kwh": 19.874997859034476,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 37,
+            "arrival": 1220.6627318967958,
+            "service_start": 1220.6627318967958,
+            "departure": 1223.6627318967958,
+            "load": 1,
+            "arrival_kwh": 19.662617684035286,
+            "departure_kwh": 19.662617684035286,
+            "passengers": [
+              37
+            ],
+            "slack_minutes": 24.337268103204224
+          },
+          {
+            "node": 97,
+            "arrival": 1224.2149380889648,
+            "service_start": 1224.2149380889648,
+            "departure": 1227.2149380889648,
+            "load": 0,
+            "arrival_kwh": 19.61291912674008,
+            "departure_kwh": 19.61291912674008,
+            "passengers": [],
+            "slack_minutes": 21.337268103204224
+          },
+          {
+            "node": 34,
+            "arrival": 1237.3265168338767,
+            "service_start": 1247.0,
+            "departure": 1250.0,
+            "load": 1,
+            "arrival_kwh": 18.70287703969801,
+            "departure_kwh": 18.70287703969801,
+            "passengers": [
+              34
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 94,
+            "arrival": 1250.161221043356,
+            "service_start": 1250.161221043356,
+            "departure": 1253.161221043356,
+            "load": 0,
+            "arrival_kwh": 18.688367145795986,
+            "departure_kwh": 18.688367145795986,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 134,
+            "arrival": 1259.0494526291786,
+            "service_start": 1260.0,
+            "departure": 1328.868071549373,
+            "load": 0,
+            "arrival_kwh": 18.15842630307194,
+            "departure_kwh": 43.410052537842056,
+            "passengers": [],
+            "slack_minutes": 180.0
+          },
+          {
+            "node": 17,
+            "arrival": 1335.1377510306995,
+            "service_start": 1351.0,
+            "departure": 1354.0,
+            "load": 1,
+            "arrival_kwh": 42.84578138452268,
+            "departure_kwh": 42.84578138452268,
+            "passengers": [
+              17
+            ],
+            "slack_minutes": 30.0
+          },
+          {
+            "node": 77,
+            "arrival": 1363.2497219667798,
+            "service_start": 1363.2497219667798,
+            "departure": 1366.2497219667798,
+            "load": 0,
+            "arrival_kwh": 42.01330640751249,
+            "departure_kwh": 42.01330640751249,
+            "passengers": [],
+            "slack_minutes": 27.0
+          },
+          {
+            "node": 25,
+            "arrival": 1370.682831404579,
+            "service_start": 1370.682831404579,
+            "departure": 1373.682831404579,
+            "load": 1,
+            "arrival_kwh": 41.61432655811056,
+            "departure_kwh": 41.61432655811056,
+            "passengers": [
+              25
+            ],
+            "slack_minutes": 4.317168595420981
+          },
+          {
+            "node": 85,
+            "arrival": 1373.682831404579,
+            "service_start": 1373.682831404579,
+            "departure": 1376.682831404579,
+            "load": 0,
+            "arrival_kwh": 41.61432655811056,
+            "departure_kwh": 41.61432655811056,
+            "passengers": [],
+            "slack_minutes": 1.3171685954209806
+          },
+          {
+            "node": 57,
+            "arrival": 1381.6361572879375,
+            "service_start": 1381.6361572879375,
+            "departure": 1384.6361572879375,
+            "load": 1,
+            "arrival_kwh": 41.168527228608305,
+            "departure_kwh": 41.168527228608305,
+            "passengers": [
+              57
+            ],
+            "slack_minutes": 4.363842712062478
+          },
+          {
+            "node": 117,
+            "arrival": 1391.6922357243172,
+            "service_start": 1391.6922357243172,
+            "departure": 1394.6922357243172,
+            "load": 0,
+            "arrival_kwh": 40.533480169334126,
+            "departure_kwh": 40.533480169334126,
+            "passengers": [],
+            "slack_minutes": 1.3638427120624783
+          },
+          {
+            "node": 130,
+            "arrival": 1397.8420153835852,
+            "service_start": 1397.8420153835852,
+            "departure": 1397.8420153835852,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 42.15798461641475
+          }
+        ],
+        "initial_kwh": 40.25,
+        "final_kwh": 40.25,
+        "minimum_kwh": 18.15842630307194,
+        "station_visits": [
+          134
+        ],
+        "within_horizon": true
+      },
+      {
+        "vehicle": 5,
+        "stops": [
+          {
+            "node": 125,
+            "arrival": 0.0,
+            "service_start": 0.0,
+            "departure": 0.0,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 1440.0
+          },
+          {
+            "node": 131,
+            "arrival": 0.0,
+            "service_start": 0.0,
+            "departure": 0.0,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 1440.0
+          }
+        ],
+        "initial_kwh": 40.25,
+        "final_kwh": 40.25,
+        "minimum_kwh": 40.25,
+        "station_visits": [],
+        "within_horizon": true
+      },
+      {
+        "vehicle": 6,
+        "stops": [
+          {
+            "node": 126,
+            "arrival": 0.0,
+            "service_start": 0.0,
+            "departure": 0.0,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 1440.0
+          },
+          {
+            "node": 132,
+            "arrival": 0.0,
+            "service_start": 0.0,
+            "departure": 0.0,
+            "load": 0,
+            "arrival_kwh": 40.25,
+            "departure_kwh": 40.25,
+            "passengers": [],
+            "slack_minutes": 1440.0
+          }
+        ],
+        "initial_kwh": 40.25,
+        "final_kwh": 40.25,
+        "minimum_kwh": 40.25,
+        "station_visits": [],
+        "within_horizon": true
+      }
+    ],
+    "rides": [
+      {
+        "request": 45,
+        "vehicle": 2,
+        "pickup_complete": 33.0,
+        "dropoff_start": 35.776181124586806,
+        "minutes": 2.776181124586806,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 14,
+        "vehicle": 2,
+        "pickup_complete": 61.0,
+        "dropoff_start": 80.00100547670816,
+        "minutes": 19.00100547670816,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 53,
+        "vehicle": 2,
+        "pickup_complete": 103.4252945314353,
+        "dropoff_start": 105.89145582015026,
+        "minutes": 2.4661612887149573,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 30,
+        "vehicle": 2,
+        "pickup_complete": 115.58138744529423,
+        "dropoff_start": 121.85932849879163,
+        "minutes": 6.2779410534974005,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 41,
+        "vehicle": 2,
+        "pickup_complete": 141.0,
+        "dropoff_start": 142.78517148145605,
+        "minutes": 1.7851714814560466,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 33,
+        "vehicle": 2,
+        "pickup_complete": 189.0,
+        "dropoff_start": 195.73558607324816,
+        "minutes": 6.735586073248157,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 51,
+        "vehicle": 2,
+        "pickup_complete": 238.0,
+        "dropoff_start": 238.84000022727218,
+        "minutes": 0.8400002272721849,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 38,
+        "vehicle": 2,
+        "pickup_complete": 292.0,
+        "dropoff_start": 295.722818766045,
+        "minutes": 3.722818766045009,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 31,
+        "vehicle": 2,
+        "pickup_complete": 388.7833800563866,
+        "dropoff_start": 394.15323320583667,
+        "minutes": 5.36985314945008,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 44,
+        "vehicle": 2,
+        "pickup_complete": 441.0,
+        "dropoff_start": 444.4866743634403,
+        "minutes": 3.4866743634402724,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 58,
+        "vehicle": 2,
+        "pickup_complete": 505.0,
+        "dropoff_start": 517.9320137333071,
+        "minutes": 12.932013733307144,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 55,
+        "vehicle": 2,
+        "pickup_complete": 529.3236135135896,
+        "dropoff_start": 530.3202760021771,
+        "minutes": 0.9966624885875035,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 26,
+        "vehicle": 2,
+        "pickup_complete": 550.0,
+        "dropoff_start": 550.0,
+        "minutes": 0.0,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 7,
+        "vehicle": 2,
+        "pickup_complete": 578.0,
+        "dropoff_start": 580.467189662189,
+        "minutes": 2.4671896621889573,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 43,
+        "vehicle": 2,
+        "pickup_complete": 990.2826973184832,
+        "dropoff_start": 994.1176424424121,
+        "minutes": 3.8349451239289465,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 24,
+        "vehicle": 2,
+        "pickup_complete": 987.0,
+        "dropoff_start": 998.5925418799723,
+        "minutes": 11.59254187997226,
+        "excess_minutes": 7.44709423311776
+      },
+      {
+        "request": 32,
+        "vehicle": 2,
+        "pickup_complete": 1051.0,
+        "dropoff_start": 1053.2095563876571,
+        "minutes": 2.2095563876571305,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 3,
+        "vehicle": 2,
+        "pickup_complete": 1077.0,
+        "dropoff_start": 1077.9041691089792,
+        "minutes": 0.9041691089792039,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 20,
+        "vehicle": 2,
+        "pickup_complete": 1093.1421231925501,
+        "dropoff_start": 1105.4963836185589,
+        "minutes": 12.35426042600875,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 59,
+        "vehicle": 2,
+        "pickup_complete": 1130.597621593778,
+        "dropoff_start": 1133.3092290798916,
+        "minutes": 2.7116074861135075,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 36,
+        "vehicle": 2,
+        "pickup_complete": 1147.7097545160716,
+        "dropoff_start": 1148.294530555093,
+        "minutes": 0.5847760390213352,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 22,
+        "vehicle": 2,
+        "pickup_complete": 1185.0,
+        "dropoff_start": 1188.8873329407163,
+        "minutes": 3.8873329407163055,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 11,
+        "vehicle": 2,
+        "pickup_complete": 1227.0,
+        "dropoff_start": 1232.6599535835421,
+        "minutes": 5.659953583542119,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 27,
+        "vehicle": 2,
+        "pickup_complete": 1247.64658518915,
+        "dropoff_start": 1248.5075347155762,
+        "minutes": 0.8609495264261113,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 47,
+        "vehicle": 2,
+        "pickup_complete": 1275.0,
+        "dropoff_start": 1275.8338250871222,
+        "minutes": 0.8338250871222499,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 46,
+        "vehicle": 2,
+        "pickup_complete": 1299.0,
+        "dropoff_start": 1300.242955622037,
+        "minutes": 1.242955622037016,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 21,
+        "vehicle": 4,
+        "pickup_complete": 39.0,
+        "dropoff_start": 53.93492608262815,
+        "minutes": 14.934926082628152,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 60,
+        "vehicle": 4,
+        "pickup_complete": 90.0,
+        "dropoff_start": 90.44876027824255,
+        "minutes": 0.4487602782425455,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 48,
+        "vehicle": 4,
+        "pickup_complete": 97.47868135707431,
+        "dropoff_start": 97.47868135707431,
+        "minutes": 0.0,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 49,
+        "vehicle": 4,
+        "pickup_complete": 172.0,
+        "dropoff_start": 172.88012254398478,
+        "minutes": 0.8801225439847826,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 40,
+        "vehicle": 4,
+        "pickup_complete": 200.0,
+        "dropoff_start": 200.7280201592708,
+        "minutes": 0.7280201592708124,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 23,
+        "vehicle": 4,
+        "pickup_complete": 222.0,
+        "dropoff_start": 226.07265820254096,
+        "minutes": 4.072658202540964,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 2,
+        "vehicle": 4,
+        "pickup_complete": 237.6629017391372,
+        "dropoff_start": 238.57697978619302,
+        "minutes": 0.9140780470558241,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 5,
+        "vehicle": 4,
+        "pickup_complete": 254.65066565447643,
+        "dropoff_start": 262.94693579023266,
+        "minutes": 8.296270135756231,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 54,
+        "vehicle": 4,
+        "pickup_complete": 275.07801918467317,
+        "dropoff_start": 277.25319994059834,
+        "minutes": 2.175180755925169,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 35,
+        "vehicle": 4,
+        "pickup_complete": 288.7474256384251,
+        "dropoff_start": 293.4393749095242,
+        "minutes": 4.691949271099077,
+        "excess_minutes": 3.9322865765258075
+      },
+      {
+        "request": 15,
+        "vehicle": 4,
+        "pickup_complete": 292.213568926688,
+        "dropoff_start": 298.85453139086457,
+        "minutes": 6.640962464176539,
+        "excess_minutes": 4.244352428317956
+      },
+      {
+        "request": 12,
+        "vehicle": 4,
+        "pickup_complete": 309.60384146319836,
+        "dropoff_start": 317.3467801987151,
+        "minutes": 7.742938735516759,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 6,
+        "vehicle": 4,
+        "pickup_complete": 358.0,
+        "dropoff_start": 360.9849552788119,
+        "minutes": 2.984955278811924,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 42,
+        "vehicle": 4,
+        "pickup_complete": 495.0,
+        "dropoff_start": 495.8347288867154,
+        "minutes": 0.8347288867154248,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 16,
+        "vehicle": 4,
+        "pickup_complete": 506.4669021012967,
+        "dropoff_start": 512.9188627943868,
+        "minutes": 6.451960693090086,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 50,
+        "vehicle": 4,
+        "pickup_complete": 538.0,
+        "dropoff_start": 538.506106856635,
+        "minutes": 0.5061068566350286,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 9,
+        "vehicle": 4,
+        "pickup_complete": 561.0,
+        "dropoff_start": 563.2391384578885,
+        "minutes": 2.2391384578885436,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 1,
+        "vehicle": 4,
+        "pickup_complete": 616.0,
+        "dropoff_start": 617.4887077792215,
+        "minutes": 1.4887077792214995,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 10,
+        "vehicle": 4,
+        "pickup_complete": 691.0,
+        "dropoff_start": 694.983060939,
+        "minutes": 3.9830609389999836,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 19,
+        "vehicle": 4,
+        "pickup_complete": 726.0,
+        "dropoff_start": 728.0099259291025,
+        "minutes": 2.009925929102451,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 4,
+        "vehicle": 4,
+        "pickup_complete": 746.0,
+        "dropoff_start": 747.1153674673233,
+        "minutes": 1.1153674673232672,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 52,
+        "vehicle": 4,
+        "pickup_complete": 754.4819965778305,
+        "dropoff_start": 756.8401113583893,
+        "minutes": 2.3581147805588216,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 13,
+        "vehicle": 4,
+        "pickup_complete": 816.0,
+        "dropoff_start": 827.7180530882796,
+        "minutes": 11.71805308827959,
+        "excess_minutes": 5.408870211206105
+      },
+      {
+        "request": 28,
+        "vehicle": 4,
+        "pickup_complete": 823.7463471259506,
+        "dropoff_start": 832.4482669230144,
+        "minutes": 8.701919797063852,
+        "excess_minutes": 4.119889884806586
+      },
+      {
+        "request": 29,
+        "vehicle": 4,
+        "pickup_complete": 883.0,
+        "dropoff_start": 886.2234009690463,
+        "minutes": 3.223400969046338,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 18,
+        "vehicle": 4,
+        "pickup_complete": 896.0,
+        "dropoff_start": 898.6529861697833,
+        "minutes": 2.6529861697832757,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 8,
+        "vehicle": 4,
+        "pickup_complete": 986.0,
+        "dropoff_start": 988.2909336672146,
+        "minutes": 2.290933667214631,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 56,
+        "vehicle": 4,
+        "pickup_complete": 980.6595812272489,
+        "dropoff_start": 1002.1054900095713,
+        "minutes": 21.445908782322476,
+        "excess_minutes": 7.356743277202522
+      },
+      {
+        "request": 39,
+        "vehicle": 4,
+        "pickup_complete": 1213.0,
+        "dropoff_start": 1215.3029521745825,
+        "minutes": 2.302952174582515,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 37,
+        "vehicle": 4,
+        "pickup_complete": 1223.6627318967958,
+        "dropoff_start": 1224.2149380889648,
+        "minutes": 0.5522061921690238,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 34,
+        "vehicle": 4,
+        "pickup_complete": 1250.0,
+        "dropoff_start": 1250.161221043356,
+        "minutes": 0.16122104335590848,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 17,
+        "vehicle": 4,
+        "pickup_complete": 1354.0,
+        "dropoff_start": 1363.2497219667798,
+        "minutes": 9.249721966779816,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 25,
+        "vehicle": 4,
+        "pickup_complete": 1373.682831404579,
+        "dropoff_start": 1373.682831404579,
+        "minutes": 0.0,
+        "excess_minutes": 0.0
+      },
+      {
+        "request": 57,
+        "vehicle": 4,
+        "pickup_complete": 1384.6361572879375,
+        "dropoff_start": 1391.6922357243172,
+        "minutes": 7.056078436379721,
+        "excess_minutes": 0.0
+      }
+    ],
+    "allocations": [
+      {
+        "station": 133,
+        "period": 20,
+        "vehicle": 2,
+        "stop": 17,
+        "start": 309.1758153074829,
+        "end": 315,
+        "grid_kwh": 2.135534387256278,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.22892928631387302
+      },
+      {
+        "station": 133,
+        "period": 21,
+        "vehicle": 2,
+        "stop": 17,
+        "start": 315,
+        "end": 330,
+        "grid_kwh": 5.5,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.5896
+      },
+      {
+        "station": 133,
+        "period": 22,
+        "vehicle": 2,
+        "stop": 17,
+        "start": 330,
+        "end": 345,
+        "grid_kwh": 5.5,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.5896
+      },
+      {
+        "station": 133,
+        "period": 23,
+        "vehicle": 2,
+        "stop": 17,
+        "start": 345,
+        "end": 360,
+        "grid_kwh": 5.5,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.5896
+      },
+      {
+        "station": 133,
+        "period": 24,
+        "vehicle": 2,
+        "stop": 17,
+        "start": 360,
+        "end": 375,
+        "grid_kwh": 5.5,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.5896
+      },
+      {
+        "station": 133,
+        "period": 25,
+        "vehicle": 2,
+        "stop": 17,
+        "start": 375,
+        "end": 381.7948550262641,
+        "grid_kwh": 2.491446842963499,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.2670831015656871
+      },
+      {
+        "station": 134,
+        "period": 84,
+        "vehicle": 4,
+        "stop": 63,
+        "start": 1260.0,
+        "end": 1275,
+        "grid_kwh": 5.5,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.95755
+      },
+      {
+        "station": 134,
+        "period": 85,
+        "vehicle": 4,
+        "stop": 63,
+        "start": 1275,
+        "end": 1290,
+        "grid_kwh": 5.5,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.95755
+      },
+      {
+        "station": 134,
+        "period": 86,
+        "vehicle": 4,
+        "stop": 63,
+        "start": 1290,
+        "end": 1305,
+        "grid_kwh": 5.5,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.95755
+      },
+      {
+        "station": 134,
+        "period": 87,
+        "vehicle": 4,
+        "stop": 63,
+        "start": 1305,
+        "end": 1320,
+        "grid_kwh": 5.5,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.95755
+      },
+      {
+        "station": 134,
+        "period": 88,
+        "vehicle": 4,
+        "stop": 63,
+        "start": 1320,
+        "end": 1328.868071549373,
+        "grid_kwh": 3.251626234770136,
+        "lec_kwh": -0.0,
+        "cost_eur": 0.5661081274734807
+      }
+    ],
+    "metrics": {
+      "travel_minutes": 576.4289718332213,
+      "excess_ride_minutes": 32.50923661117674,
+      "service_minutes": 360.0,
+      "waiting_minutes": 1626.6338476351682,
+      "charging_minutes": 141.48711126815425,
+      "charged_kwh": 51.87860746498991,
+      "grid_kwh": 51.87860746498991,
+      "lec_kwh": 0.0,
+      "travel_eur": 207.51442985995968,
+      "user_eur": 10.077863349464788,
+      "energy_eur": 7.2507205153530405,
+      "objective_eur": 224.8430137247775,
+      "legacy_weighted_minutes": 440.4490380277102
+    }
+  },
+  "kpis": {
+    "served_requests": 60,
+    "violations": {},
+    "effective_eur_per_kwh": 0.1397632062550284,
+    "charging_sessions": 2,
+    "stations_used": [
+      133,
+      134
+    ],
+    "active_vehicles": 2,
+    "soc": [
+      {
+        "vehicle": 1,
+        "min": 40.25,
+        "final": 40.25
+      },
+      {
+        "vehicle": 2,
+        "min": 29.543338793094936,
+        "final": 40.24999999999998
+      },
+      {
+        "vehicle": 3,
+        "min": 40.25,
+        "final": 40.25
+      },
+      {
+        "vehicle": 4,
+        "min": 18.15842630307194,
+        "final": 40.25
+      },
+      {
+        "vehicle": 5,
+        "min": 40.25,
+        "final": 40.25
+      },
+      {
+        "vehicle": 6,
+        "min": 40.25,
+        "final": 40.25
+      }
+    ]
+  }
+}
